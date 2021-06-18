@@ -1,9 +1,2 @@
 # SQLZOO
-## sql 공부
-- sqlzoo 
-  * select
-  * where
-  * join
-  
-
-## sql로 맛보는 데이터 전처리분석
+## SQL 실습문제풀이
