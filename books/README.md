@@ -28,8 +28,5 @@
 - 웹 API
 - 실전 데이터 분석 프로젝트
 
-## 누구나 파이썬 통계분석
-<figure>
-    <img src='http://image.yes24.com/goods/89972967/XL'>
-</figure>
+## [누구나 파이썬 통계분석](http://image.yes24.com/goods/89972967/XL)
 ### sq
