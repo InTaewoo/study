@@ -10,8 +10,7 @@
 
 
 
-## 데이터 분석을 위한 파이썬 철저 입문
-![](https://wikibook.co.kr/images/cover/l/9791158391928.jpg)
+## [데이터 분석을 위한 파이썬 철저 입문](https://wikibook.co.kr/images/cover/l/9791158391928.jpg)
 - 파이썬 프로그래밍 언어
 - 파이썬 시작하기
 - 파이썬을 계산기처럼 이용하기
@@ -30,5 +29,7 @@
 - 실전 데이터 분석 프로젝트
 
 ## 누구나 파이썬 통계분석
-
+<figure>
+    <img src='http://image.yes24.com/goods/89972967/XL'>
+</figure>
 ### sq
