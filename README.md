@@ -1,4 +1,4 @@
-## 개인 공부를 정리하는 곳입니다
+## 개인 공부를 정리하는 곳입니다.
 
 # Book Reviews
 
@@ -66,7 +66,7 @@
 - 차원축소
 - 군집화
 - 텍스트분석
-
+E
 ## [Django 한그릇 뚝딱](http://image.yes24.com/goods/83568594/XL)
 
 ## [SQL 자격검정 실전문제](http://mobile.kyobobook.co.kr/common/image/resize?url=http://image.kyobobook.co.kr/images/book/large/846/l9788988474846.jpg)
