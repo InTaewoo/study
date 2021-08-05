@@ -49,6 +49,7 @@
 - 회귀분석
 
 ## [파이썬을 활용한 개발과 스크레이핑 입문](http://image.yes24.com/goods/76488159/XL)
+
 - 크롤링과 스크레이핑
 - 크롤러 설계하기
 - 크롤러 및 스크레이핑 개발환경 준비와 파이썬 기본
@@ -58,6 +59,7 @@
 - 크롤러로 수집한 데이터 사용하기
 
 ## [파이썬 머신러닝 완벽 가이드](https://seol8118.github.io/assets/images/book/pythonMLDefinitiveGuide/cover.JPG)
+
 - 파이썬 기반의 머신러닝과 생태계 이해
 - 사이킷런으로 시작하는 머신러닝
 - 평가
