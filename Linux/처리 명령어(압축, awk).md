@@ -76,8 +76,52 @@ i hbve b wbter.
 ```
 
 ### index
+- 문자열의 길이 반환
+
+
 ```
 echo "i have a water." | awk -F " " '{ print index($4, "a") }'
 ```
 
 ### length
+- 문자열 길이 반환
+
+```
+echo "i have a water." | awk -F " " '{ print length($4) }'
+6
+```
+
+### substr
+- 시작위치에서 주어진 개수만큼 반환
+
+```
+$ echo "1234567890" | awk -F " " '{ print substr($1, 3, 2) }'
+34
+```
+
+### split
+-문자열을 분리하여 배열로 반환
+
+```
+$ echo "A/B/C/D/E/F/G" | awk -F " " '{ print split($1, array, "/");print array[1];print array[3]; }'
+7
+A
+C
+```
+
+### printf
+- 지정한 포맷에 따라 함수 출력
+
+```
+echo | awk '{ printf("%.1f + %.2f = %.3f\n", 40.1, 20.2, 40.1 + 20.2); }'
+40.1 + 20.20 = 60.300
+```
+
+# system
+- 명령실행
+
+```
+echo "Hello World" | awk '{ system("echo "$1) }'
+Hello
+```
+
