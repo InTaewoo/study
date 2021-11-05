@@ -81,6 +81,7 @@ i hbve b wbter.
 
 ```
 echo "i have a water." | awk -F " " '{ print index($4, "a") }'
+2
 ```
 
 ### length
