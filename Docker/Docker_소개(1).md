@@ -52,5 +52,5 @@ G플롭스(GFLOPS, GPU FLoating point Operations Per Second)는 컴퓨터의 성
 서비스가 커지면 커질 수록 관리해야 하는 컨테이너의 양이 급격히 증가. 도커를 사용하여 관리를 한다 하더라도 쉽지않은 형태 배포 및 컨테이너 배치 전략 스케일-인, 스케일-아웃이 어려움
 ![image](https://user-images.githubusercontent.com/81672260/143966867-d74cf358-e0f5-4d8f-96fa-278ed09f8fdb.png)
 
-
+[출처] 왕초보도 따라하는 도커 기초 1 도커와 컨테이너 소개|작성자 일선스
 
