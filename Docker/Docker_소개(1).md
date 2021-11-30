@@ -40,3 +40,17 @@ VM으로 실행했을 때와 컨테이너로 실행했을 때 CPU 튀는 현상 
 G플롭스(GFLOPS, GPU FLoating point Operations Per Second)는 컴퓨터의 성능을 수치로 나타낼 때 주로 사용되는 단위
 
 ![image](https://user-images.githubusercontent.com/81672260/143966306-6e284a77-3f3f-476e-98ff-25e370b5f233.png)
+
+# 1.5 컨테이너를 격리하는 기술
+리눅스 네임 스페이스 : 각 프레서스가 파일 시스템 마운트, 네트워크, 유저, 호스트네임 등에 대해 시스템에 독립 뷰를 제공
+![image](https://user-images.githubusercontent.com/81672260/143966681-edb939dd-746f-4f7a-8c5d-9a079a7f695f.png)
+
+리눅스 컨트롤 그룹 : 프로세스가 소비할 수 있는 리소스양(CPU,메모리,I/O, 네트워크 대역대, device, 노드 등)을 제한
+![image](https://user-images.githubusercontent.com/81672260/143966777-51733d80-973c-4a93-983b-420593f5b297.png)
+
+# 1.6 도커의 한계
+서비스가 커지면 커질 수록 관리해야 하는 컨테이너의 양이 급격히 증가. 도커를 사용하여 관리를 한다 하더라도 쉽지않은 형태 배포 및 컨테이너 배치 전략 스케일-인, 스케일-아웃이 어려움
+![image](https://user-images.githubusercontent.com/81672260/143966867-d74cf358-e0f5-4d8f-96fa-278ed09f8fdb.png)
+
+
+
