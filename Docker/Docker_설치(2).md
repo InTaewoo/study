@@ -9,6 +9,9 @@ root계정으로 docker 설치
 ![image](https://user-images.githubusercontent.com/81672260/143971142-4b983920-9dea-42a3-8902-02d1b81dd04c.png)
 
 ![image](https://user-images.githubusercontent.com/81672260/143971549-18d6b7ee-4e99-491a-9a3f-4a92ad91b10a.png)
+
+```
+
 firefox로 127.0.0.1:8080 접속 tomcat창 확인
 # 3. 내가 원하는 이미지 찾기
 
@@ -44,3 +47,5 @@ pull을 이용해 원하는 이미지 다운
 ```
 sudo docker images
 ```
+
+출처 : https://www.notion.so/b67ed727aea4467cbc3226bb0c8e8336
