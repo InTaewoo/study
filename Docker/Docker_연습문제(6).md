@@ -13,3 +13,26 @@ docker stop `docker ps -a -q` 실행중인 모든 컨테이너 중지
 docker rm `docker ps -a -q` 실행중인 모든 컨테이너 삭제
 docker rmi `docker ps -a -q` 모든 이미지 삭제
 ```
+
+## 2. 도커 기능을 사용해 Jenkins 검색
+
+```
+docker search jenkins
+```
+
+## 3. jenkins를 사용하여 설치
+
+```
+docker pull jenkins/jenkins
+docker inspect jenkins/jenkins
+docker run -d -p 8080:8080 --name jk jenkins/jenkins
+```
+![image](https://user-images.githubusercontent.com/81672260/144155128-c0d5bc5f-667f-4330-bd3e-e288677b69e3.png)
+- jenkins/jenkins 설치
+
+![image](https://user-images.githubusercontent.com/81672260/144155362-53e7a24e-4860-4abb-938b-00dc8281a236.png)
+- inspect jenkins/jenkins 정보를 통해 8080포트가 열려있다는걸 확인
+
+![image](https://user-images.githubusercontent.com/81672260/144155614-55351cda-c34f-45e1-b28e-e2a4e8bc2d58.png)
+
+
