@@ -1,7 +1,12 @@
 # 9 환경 변수를 사용해 MySQL 서비스 구축하기
 
 ## 9.1 dockerhub에서 mysql 검색
+https://hub.docker.com/_/mysql
 ![image](https://user-images.githubusercontent.com/81672260/144157801-f3c15473-7b4b-4ca1-af99-4b42ad4fa84f.png)
+
+![image](https://user-images.githubusercontent.com/81672260/144160344-dfc20ff1-06b3-4ccb-a2b2-33b196e23c09.png)
+
+
 
 # 9.2 환경 변수 사용해 데이터 전달하기
 
