@@ -30,6 +30,9 @@ sudo docker cp <from container>:<path> <to container>:<path>
 
 # 7.5 도커 컨테이너 모두 삭제
 
+![image](https://user-images.githubusercontent.com/81672260/144151736-f3f7e8f0-53e9-4f46-a2af-135728789f41.png)
+
+전체 중지후 삭제 
 ```
 sudo docker stop `sudo docker ps -a -q`
 sudo docker rm `sudo docker ps -a -q`
