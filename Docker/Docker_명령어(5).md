@@ -8,3 +8,34 @@
 
 ![image](https://user-images.githubusercontent.com/81672260/144150593-15df4ab3-b812-4231-b67f-ca894fe6a01a.png)
 
+# 7.2 컨테이너 내부 셸 실행
+```
+docker exec -it tc(컨테이너이름) /bin/bash
+```
+나갈땐 exit
+
+# 7.3 컨테이너 로그 확인
+
+```
+docker logs tc(컨테이너이름)
+```
+
+# 7.4 호스트 및 컨테이너 간 파일 복사
+
+```
+sudo docker cp <path> <to container>:<path>
+sudo docker cp <from container>:<path> <path>
+sudo docker cp <from container>:<path> <to container>:<path>
+```
+
+# 7.5 도커 컨테이너 모두 삭제
+
+```
+sudo docker stop `sudo docker ps -a -q`
+sudo docker rm `sudo docker ps -a -q`
+```
+
+```
+컨테이너 ID
+docker ps -a -q
+```
