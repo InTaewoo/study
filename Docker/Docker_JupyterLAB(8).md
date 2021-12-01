@@ -30,8 +30,7 @@ docker run -v <호스트 경로>:<컨테이너 내 경로>:<권한> # /tmp:home/
 mkdir ~/jupyternotebook
 chmod 777 ~/jupyternotebook
 cd ~/jupyternotebook
-sudo docker run --rm -p 8080:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work:
-rw jupyter/datascience-notebook:9b06df75e445
+sudo docker run --rm -p 8080:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work:rw jupyter/datascience-notebook:9b06df75e445
 ```
 
 ![image](https://user-images.githubusercontent.com/81672260/144176608-9711a656-5043-47e7-bbf4-fc81e68869ef.png)
