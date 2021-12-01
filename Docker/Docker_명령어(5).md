@@ -34,8 +34,9 @@ sudo docker cp <from container>:<path> <to container>:<path>
 
 전체 중지후 삭제 
 ```
-sudo docker stop `sudo docker ps -a -q`
-sudo docker rm `sudo docker ps -a -q`
+sudo docker stop `sudo docker ps -a -q` 실행중인 모든 컨테이너 중지
+sudo docker rm `sudo docker ps -a -q` 모든 컨테이너 삭제
+sudo docker rmi `sudo docker images -a -q` docker이미지 전체 삭제
 ```
 
 ```
