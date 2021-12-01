@@ -31,6 +31,8 @@ echo $env_name
 ![image](https://user-images.githubusercontent.com/81672260/144159711-a98fa81b-3dbd-4306-adc8-7c2079e2c14d.png)
 
 ```
-docker run --name ms -e MYSQL_ROOT_PASSWORD='xodn8050!!' -d mysql
+docker run --name ms -e MYSQL_ROOT_PASSWORD='xodn8050!!' -d mysql mysql 비밀번호 설정
+docker exec -it ms mysql -u root -p mysql 접속하기
 ```
 
+![image](https://user-images.githubusercontent.com/81672260/144168300-d88b4bd8-d523-4aae-b372-29ec8a3285d1.png)
