@@ -13,7 +13,19 @@ docker run -d --name nx -e env_name=test1234 nginx
 ![image](https://user-images.githubusercontent.com/81672260/144158598-2b66306b-8409-4bae-8550-0cb431b93ee1.png)
 - bash 열기
 
+![image](https://user-images.githubusercontent.com/81672260/144158682-c728afc5-174d-4634-9b51-d032a1ff8273.png)
+
 ```
 printenv 환경변수에 대한 내용을 볼수있음
+printenv env_name
+echo $env_name
 ```
-![image](https://user-images.githubusercontent.com/81672260/144158682-c728afc5-174d-4634-9b51-d032a1ff8273.png)
+![image](https://user-images.githubusercontent.com/81672260/144158990-004d5b91-bb26-4d91-b1c1-2855131e9d22.png)
+
+# 9.3 MySQL 서비스 구축하기
+![image](https://user-images.githubusercontent.com/81672260/144159711-a98fa81b-3dbd-4306-adc8-7c2079e2c14d.png)
+
+```
+docker run --name ms -e MYSQL_ROOT_PASSWORD='xodn8050!!' -d mysql
+```
+
