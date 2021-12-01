@@ -47,8 +47,9 @@ firefox 127.0.0.1:8080
 sudo docker exec -it jk cat /var/jenkins_home/secrets/initialAdminPassword
 sudo docker logs jk
 ```
+
 ![image](https://user-images.githubusercontent.com/81672260/144156980-97e009bb-c927-498c-a587-4acd60d6b34a.png)
--sudo docker exec -it jk cat /var/jenkins_home/secrets/initialAdminPassword
+- sudo docker exec -it jk cat /var/jenkins_home/secrets/initialAdminPassword
 
 ![image](https://user-images.githubusercontent.com/81672260/144156932-24c9c7d1-1e8d-46ef-8d6a-1488daa33a74.png)
 - sudo docker logs jk
