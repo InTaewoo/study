@@ -42,3 +42,14 @@ sudo docker rm `sudo docker ps -a -q`
 컨테이너 ID
 docker ps -a -q
 ```
+
+# 7.6 임시 컨테이너 생성
+
+![image](https://user-images.githubusercontent.com/81672260/144152923-ca2ac900-10e6-486b-8368-c9e9f93cbc6f.png)
+
+```
+docker run -d -p 80:8080 --rm --name tc tomcat
+```
+
+임시 컨테이너라 정지만 해도 삭제됨
+![image](https://user-images.githubusercontent.com/81672260/144153074-c6ce213a-4c24-40c1-aaaf-eed0bd9d0f32.png)
