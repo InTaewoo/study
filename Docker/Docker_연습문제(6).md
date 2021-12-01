@@ -11,7 +11,7 @@
 ```
 docker stop `docker ps -a -q` 실행중인 모든 컨테이너 중지
 docker rm `docker ps -a -q` 실행중인 모든 컨테이너 삭제
-docker rmi `docker ps -a -q` 모든 이미지 삭제
+docker rmi `docker images -q` 모든 이미지 삭제
 ```
 
 ## 2. 도커 기능을 사용해 Jenkins 검색
