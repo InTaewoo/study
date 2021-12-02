@@ -3,3 +3,6 @@
 ## 12.1 도커 이미지 태그 변경 후 푸시
 회원가입이 되어있어야 한다.
 https://hub.docker.com/
+
+```
+docker login
