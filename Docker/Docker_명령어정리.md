@@ -65,3 +65,33 @@ docker start "container ID"
 docker attach "container ID"
 ```
 
+## stop (컨테이너 종료하기)
+```
+docker stop "container ID"
+```
+
+## rm (컨테이너 삭제)
+```
+docker rm "container ID"
+```
+- 운영체제의 프로세스와 달리 컨테이너가 종료되더라도 다시 실행하면 이전 상태가 유지된다 따라서 사용하지 않는 컨테이너는
+
+  rm 명령어를 통해 완전히 제거를 해야한다
+
+## port forwarding
+```
+docker run -it -p "HOST PORT":"Docker PORT" "실행할 도커 이미지" /bin/bash
+```
+
+## docker image 만들기
+1. 반드시 "Dockerfile"이라는 이름으로 dockerfile 생성
+   From "기본이미지"
+   ADD "이미지에 추가할 파일"
+   RUN "실행할 명령어"
+
+2. 만들어진 dockerfile이 존재하는 위치에서 아래 명령어 입력
+
+```
+docker build --tag"태그" .
+   
+   
