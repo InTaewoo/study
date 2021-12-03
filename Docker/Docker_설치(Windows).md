@@ -15,3 +15,18 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 
 3. 가상 머신 플랫폼 기능 활성화 명령어 입력
+
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+
+![image](https://user-images.githubusercontent.com/81672260/144531257-278cc19f-f214-4e5e-a48a-b1d41097f09f.png)
+
+4. x64 머신용 최신 WSL2 Linux 커널 업데이트 패키지 다운로드, 설치
+wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+![image](https://user-images.githubusercontent.com/81672260/144531317-ccc829f1-c5c7-4585-8c7d-59c1746f19a8.png)
+
+5. Docker Desktop - Restart 선택
+6. 
+7. Docker 설치 완료
