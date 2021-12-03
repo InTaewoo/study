@@ -28,5 +28,7 @@ wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 ![image](https://user-images.githubusercontent.com/81672260/144531317-ccc829f1-c5c7-4585-8c7d-59c1746f19a8.png)
 
 5. Docker Desktop - Restart 선택
-6. 
-7. Docker 설치 완료
+![image](https://user-images.githubusercontent.com/81672260/144531381-9e968bbe-2ec0-4042-9883-cdd87eb21125.png)
+
+6. Docker 설치 완료
+![image](https://user-images.githubusercontent.com/81672260/144531395-9051afe8-94d1-4d80-a9db-da238e8b09e8.png)
