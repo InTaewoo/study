@@ -33,3 +33,10 @@ docker run --name wc3 -p 8081:80 httpd
 
 
 ![image](https://user-images.githubusercontent.com/81672260/144534531-1ffb35fc-d30c-472d-a275-72d704860e8e.png)
+
+
+
+![image](https://user-images.githubusercontent.com/81672260/144534581-edbd74a3-6696-4425-9f5a-d2ce92a9d5c2.png)
+
+로그창을 통해 접속 확인
+
