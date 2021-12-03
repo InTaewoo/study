@@ -7,5 +7,11 @@
 
 2. 리눅스 서브시스템 활성 명령어 입력
 
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 
-3. 
+![image](https://user-images.githubusercontent.com/81672260/144531203-e9389ec4-f4aa-47f5-9022-a4dd1099d53e.png)
+
+
+3. 가상 머신 플랫폼 기능 활성화 명령어 입력
