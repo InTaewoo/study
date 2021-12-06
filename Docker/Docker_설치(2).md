@@ -10,7 +10,6 @@ root계정으로 docker 설치
 
 ![image](https://user-images.githubusercontent.com/81672260/143971549-18d6b7ee-4e99-491a-9a3f-4a92ad91b10a.png)
 
-```
 
 firefox로 127.0.0.1:8080 접속 tomcat창 확인
 # 3. 내가 원하는 이미지 찾기
@@ -30,6 +29,7 @@ https://hub.docker.com
 ```
 sudo docker search tomcat
 ```
+
 ![image](https://user-images.githubusercontent.com/81672260/143973314-b43d73a7-ac96-4379-ac5d-ad6db220f9ee.png)
 
 # 3.4 도커 이미지 다운로드
