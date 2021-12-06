@@ -32,6 +32,7 @@
 
 # 1.4 컨테이너 성능 비교
 
+
 VM으로 실행했을 때와 컨테이너로 실행했을 때 CPU 튀는 현상 비교
 ![image](https://user-images.githubusercontent.com/81672260/143966202-5782a3dc-71f2-49fe-a38d-ce81331589ac.png)
 
