@@ -36,7 +36,7 @@ sudo docker search tomcat
 
 '''
 sudo docker pull tomcat
-'''
+''' 
 
 pull을 이용해 원하는 이미지 다운
 
