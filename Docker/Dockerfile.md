@@ -76,3 +76,31 @@
   - 보통 컨테이너 내부에서 항상 돌아가야하는 서버를 띄울 때 사용한다.
 
 - ENTRYPOINT : ENTRYPOINT는 docker run 실행 시, 추가적인 명령어의 존재 여부와 상관 없이 무조건 실행되는 명령이다.
+
+## 생성한 Dockerfile을 Image로 빌드
+
+- 이미지 빌드 명령어
+
+```
+docker build -tag(-t) [이미지 이름:이미지 버전] [Dockerfile의 경로]
+docker build -t apache-image .
+```
+
+- 생성된 이미지 확인
+
+```
+docker images
+```
+
+## Image로 Container를 생성
+- 컨테이너 생성 시 도커 볼륨을 통해 host와 도커 컨테이너의 html 폴더를 동기화.
+
+```
+docekr run --name apache-container -d -p 80:80 -v ~/html/:/var/www/html apache-image
+```
+
+- --name:컨테이너 이름
+- -d : 백그라운드모드로 실행
+- -p : [호스트포트][컨테이너포트] 포트 연결
+- v : 로컬과 컨테이너 파일 연동
+
