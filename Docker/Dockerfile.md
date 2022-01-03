@@ -14,3 +14,34 @@
 - 어떠한 이미지를 배포할 때, 몇 기가씩이나 되는 이미지 파일 자체를 배포하기보다는 그 이미지를 만들 수 있는 스크립트인 Dockerfile만을 배포한다면 매우 편리할 것이다.
 - 사용자는 그 스크립트를 실행시키기만 하면 스스로가 그 Dockerfile에 해당하는 이미지를 얻을 수 있기 때문이다.
 - 실제로 Docker Hub에 가면, Dockerfile로 이미지를 배포하고 있는 사람들을 심심찮게 볼 수 있다. 물론 이미지로 배포하는 사람도 있지만.
+ 
+### 3. 컨테이너(이미지)가 특정 행동을 수행하도록 한다.
+- 컨테이너 환경에서 애플리케이션을 개발하다 보면, 특정 행동을 취하도록 하는 컨테이너를(이미지를) 만들어야 할 때가 있다.
+- 이는 사실 말로서 설명하기는 좀 어렵고, 실제 개발을 하다보면 '아, 이거 Dockerfile 쓰면 좀 간단해 지겠구나...' 라는 생각이 머릿속에서 불현듯 번개처럼 스칠때가 있다.
+
+## Dockerfile 작성 및 명령어
+
+- Dockerfile을 작성 할 땐 실제 파일의 이름을 `Dockerfile`로 해야한다.
+- Dockerfile의 내용은 아래와 같다.
+
+```
+  # server image는 ubunutu 18.04를 사용
+  FROM ubuntu:18.04 
+  # Dockerfile 작성자
+  MAINTAINER Wimes <yms04089@kookmin.ac.kr> 
+
+  # image가 올라갔을 때 수행되는 명령어들
+  # -y 옵션을 넣어서 무조건 설치가 가능하도록 한다.
+  RUN \
+      apt-get update && \
+      apt-get install -y apache2
+
+  # apache가 기본적으로 80포트를 사용하기 때문에 expose를 이용해 apache server로 접근이 가능하도록 한다.
+  EXPOSE 80 
+
+  # 컨테이너가 생성 된 이후에 내부의 아파치 서버는 항상 실행중인 상태로 만들어준다.
+  # apachectl을 foreground(즉, deamon)상태로 돌아가도록 한다.
+  CMD ["apachectl", "-D", "FOREGROUND"]
+  ```
+  
+- From : 베이스 이미지
