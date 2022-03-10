@@ -137,4 +137,43 @@
 - 페타바이트 규모, 대용량 안전하게 전송하기 위함
 - 기가(giga) > 테라(tera) > 페타(peta) > 엑사(exa)
 - 보통 온 프레미스 데이터 센터 -> AWS로 데이터를 이동한다.(같은 역할 서비스, AWS Database Migration Service(AWS DMS))
+- 비용 또한 고송 인터넷 비용의 1/5 정도로 저렴
 
+### 5.5 AWS Snowball Edge
+- 온보드 스토리지 및 컴퓨팅 기능을 포함하는 100TB 데이터 전송 디바이스
+
+### 5.6 AWS Snowmobile
+- 엑사바이트 규모의 데이터 세트를 AWS에서 또는 AWS로 마이그레이션 하거나 전송
+- 기가 -> 테라 -> 페타 -> 엑사
+
+## 6.네트워킹과 콘텐츠 전송
+
+### 6.1 AWS VPC
+- 사용자의 AWS 계정 전용 가상 네트워크
+
+![image](https://user-images.githubusercontent.com/81672260/157570461-95ef8837-aed3-414e-bbf0-ad56ab6d81ef.png)
+
+![image](https://user-images.githubusercontent.com/81672260/157570583-ccc6dcf4-b0ce-4082-b236-7a02476cd21a.png)
+
+![image](https://user-images.githubusercontent.com/81672260/157570599-6ee3acef-a614-4045-8ace-5903b38c8f5c.png)
+
+### 6.2 AWS CloudFront  *중요*
+- CDN
+- 앞(Front)에서 미리 Request를 처리해준다.
+- DDos 방어 제공(AWS Shield)
+- 웹 사이트, API, 동영상 콘텐츠 또는 기타 웹 자산의 전송을 가속화하는 글로벌 콘텐츠 전송 네트워크(CDN)서비스.
+
+![image](https://user-images.githubusercontent.com/81672260/157572133-0ee9637a-2357-4386-ac32-c8fad11dec9f.png)
+
+### 6.3 AWS Route 53
+- 도메인 등록, 도메인 관리
+- 서버가 다운되면 다른 곳으로 Routing 해줌
+- 가용성과 확장성이 우수한 클라우드 Domain Name System(DNS) 웹서비스.
+
+### 6.4 AWS Direct Connect  *중요*
+- 온 프레미스에서 AWS로 전용 네트워크 연결을 쉽게 설정할 수 있다.
+- 기존 서버실 -> AWS로 전용 네트워크 연결을 쉽게!
+
+### 6.5 Elastic Load Balancing(ELB)
+- 트래픽 몰리면 EC2 인스턴스에 분산해서 배포해줌.
+- 수신되는 애플리케이션 트래픽을 여러 EC2 인스턴스에 자동으로 배포
