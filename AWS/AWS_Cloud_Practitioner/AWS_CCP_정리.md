@@ -177,3 +177,7 @@
 ### 6.5 Elastic Load Balancing(ELB)
 - 트래픽 몰리면 EC2 인스턴스에 분산해서 배포해줌.
 - 수신되는 애플리케이션 트래픽을 여러 EC2 인스턴스에 자동으로 배포
+- 지원하는 밸런스
+ - Application Load Balancer -> HTTP / HTTPS (Layer 7)트래픽을 라우팅하는 데 사용  *중요*
+ - Network Load Balancer -> TCP (Layer4) 트래픽을 라우팅
+ - Classic Load balancer -> TCP (Layer 4)트래픽을 라우팅
