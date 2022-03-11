@@ -181,3 +181,19 @@
  - Application Load Balancer -> HTTP / HTTPS (Layer 7)트래픽을 라우팅하는 데 사용  *중요*
  - Network Load Balancer -> TCP (Layer4) 트래픽을 라우팅
  - Classic Load balancer -> TCP (Layer 4)트래픽을 라우팅
+
+## 7. 개발자 도구
+
+### 7.1 AWS CodeCommit
+- 완전관리형 소스 제어 서비스로 기업이 안전하고 확장성이 뛰어난 프라이빗 Git 리포지토리를 손쉽게 호스팅할 수 있게 해준다.
+- 소프트웨어 버전 관리
+
+### 7.2 AWS CodeBuild
+
+### 7.3 AWS CodeDeploy
+
+### 7.4 AWS CodePipeline
+- 빠르고 안정적인 애플리케이션 및 인프라 업데이트용
+- 릴리스 파이프 라인을 자동화하는데 데 도움이 되는 서비스
+- 릴리스 모델에 따라 코드가 변경 될 때마다 릴리스 프로세스의 빌드, 테스트 및 배포 단계를 자동화한다.
+- 내가 코드를 수정 -> 릴리스 프로세스로 자동화 해줌.
