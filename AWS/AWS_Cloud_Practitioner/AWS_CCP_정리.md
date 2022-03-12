@@ -364,3 +364,58 @@ Text -> 음성으로 변환
 
 ### 12.6 AWS Mobile Analytics
 
+## 13. 애플리케이션 서비스
+
+### 13.1 AWS Step Functions
+
+### 13.2 AWS API Gateway
+
+### 13.3 AWS Elastic Transcoder
+
+### 13.4 AWS SWF
+
+## 14. 메시징
+
+### 14.1 AWS SQS(Simple Queue Service)
+
+### 14.2 AWS SNS (Simple Notification Service)
+
+### 14.3 AWS SES (Simple Email Service)
+
+## 15. 기업 생산성
+
+### 15.1 AWS WorkDocs
+
+### 15.2 AWS WorkMail
+
+### 15.3 AWS Chime
+
+## 16.데스크톱 및 앱스트리밍
+
+### 16.1 AWS WorkSpaces
+
+### 16.2 AWS AppStream 2.0
+
+## 17. 사물인터넷
+
+### 17.1 AWS loT 플랫폼
+
+### 17.2 AWS Greengrass
+
+### 17.3 AWS loT 버튼
+
+## 18. 게입 개발
+
+### 18.1 AWS GameLift
+
+### 18.3 AWS Lumberyard
+
+## 19. 벡서에 없는 내용
+
+### 19.1 공동 책임 모델 - Shared Responsibility Model *중요*
+
+<img width="677" alt="image" src="https://user-images.githubusercontent.com/81672260/158003424-e2e1d8ed-3501-4188-9c25-fea2253d51b3.png">
+
+구성 : 고객/AWS 책임 공유 !
+- AWS : 인프라 장치 구성
+- 고객 : 자체 Guest OS/DB 
