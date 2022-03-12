@@ -253,3 +253,34 @@
 - 예약된 활동에 대해 사전 알림 제공
 
 ## 9. 보안, 자격 증명 및 규정 준수
+
+### 9.1 AWS Cloud Directory
+
+### 9.2 AWS IAM (Identity and Access Management) *중요*
+- AWS 서비스 및 리소스에 대한 액세스를 안전하게 관리할 수 있다.
+- AWS 서비스 및 그룹을 생성/관리, 권한에 따라 AWS 리서스 액세스 Allow/Deny설정 가능
+
+### 9.3 AWS Inspector
+- 의미 : 조사관, 감독관
+- Amazon Inspector는 AWS에 배포 된 애플리케이션의 보안 및 규정 준수를 개선에 도움, 자동화된 보안평가 서비스
+
+### 9.4 AWS Certificate Manager
+
+### 9.5 AWS CloudHSM
+- 클라우드 기반
+- AWS 클라우드에서 자체 암호화 키를 쉽게 생성하고 사용할 수 있게 해주는 하드웨어 보안 모듈
+
+### 9.6 AWS Directory Service
+
+### 9.7 AWS Key Management Service
+
+### 9.8 AWS Organizations  *중요*
+- 통합된 결제를 추구
+- 각 부서별 계정이 여러개라면 이를 어떻게 인식할까? -> Tag를 이용
+
+### 9.9 AWS Shield  *중요*
+- DDos 방지용
+
+
+### 9.10
+
