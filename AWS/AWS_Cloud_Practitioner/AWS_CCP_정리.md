@@ -282,5 +282,49 @@
 - DDos 방지용
 
 
-### 9.10
+### 9.10 AWS WAF *중요*
+SQL Injection, XSS
+
+
+## 10. 분석
+
+### 10.1 AWS Athena 아테나  *중요*
+- 표준 SQL을 사용하여 Amazon S3에서 직접 데이터를 쉽게 분석 할 수있는 대화 형 쿼리 서비스 
+- AWS S3, Amazon Simple Storage Service
+
+### 10.2 AWS EMR (빅 데이터 플랫폼) *중요*
+- 방대한 양의 데이터를 처리하기 위한 클라우드 빅 데이터 플랫폼
+- Amazon Elastic MapReduce
+- big data processing and analysis
+- 빅 데이타를 분산 처리(Map) > 데이터를 합치는 과정(Reduce)
+- Amazon EC2 인스턴스에서 대량의 데이터를 쉽고 빠르며 비용 효율적으로 처리할 수 있는 AWS 관리형 Hadoop 프레임 워크는 어떤 서비스입니까?
+
+### 맵리듀스(MapReduce)란?
+- 맵리듀스 프레임워크는 대용량 데이터를 분산 처리하기 위한 목적으로 개발된 프로그래밍 모델
+- Google에 의해 고안된 맵리듀스 기술
+- 맵리듀스는 임의의 순서로 정렬된 데이터를 분산 처리(Map)하고 이를 다시 합치는(Reduce)과정
+
+### 10.3 AWS CloudSearch
+
+### 10.4 AWS Elasticsearch Service
+
+### 10.5 AWS Kinesis
+- 실시간으로 비디오 및 데이터 스트림을 손쉽게 수집, 처리 및 분석
+
+### 10.6 AWS Redshift
+- 데이터 웨어하우스
+- 클라우드에서 완벽하게 관리되는 페타바이트 급 데이터 웨어하우스 서비스.
+- 작게는 수백 기가바이트부터 시작하여 페타바이트 이상까지 데이터를 확장할 수 있다.
+
+### 10.7 AWS QuickSight
+- 한 회사가 비즈니스 인텔리전스 솔루션을 구축 중이며 보고 목적으로 대시보드를 사용하려고 한다.
+
+<img width="368" alt="image" src="https://user-images.githubusercontent.com/81672260/158002873-8a3bfc10-4d05-4b8b-93e4-487245999087.png">
+
+### 10.8 AWS Data Pipeline
+
+### 10.9 AWS Glue
+- 분석을 위해 데이터를 쉽게 준비 할 수 있도록 데이터 추출, 변환 및 로드(ETL)도구로 작동하는 AWS서비스
+- 글루건,,,풀로 붙여서 미리 준비
+
 
