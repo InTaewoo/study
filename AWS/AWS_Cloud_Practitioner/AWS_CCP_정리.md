@@ -47,11 +47,20 @@
 
 ### 2.6 AWS Elastic Beanstalk
 - Java,.NET, PHP, Node.js, Python, Ruby, Go, Docker를 사용하여 Apache, Nginx, Passenger, IIS(인터넷 정보 서비스) 같은 친숙한 서버에서 개발된 웹 애플리케이션 및 서비스를 배포하고 확장하는 허비흐로서 사용이 간편하다.
+- 사용자가 코드 및 구성 설정을 제공하면 Elastic Beanstalk이 다음 작업을 수행하는 데 필요한 리소스를 배포한다.
+- 용량 조정
+- 로드 밸런싱
+- 자동 조정
+- 애플리케이션 상태 모니터링
 
 ### 2.7 AWS Lambda
 - 서버리스, 서버를 프로비저닝 하거나 관리할 필요 없이 코드를 실행할 수 있다.
 - 비용 청구기준(1. 실행시간, 2.요청 수)
  ![image](https://user-images.githubusercontent.com/81672260/157180202-cfb0ed7a-c6ac-40cf-a82d-756238a9244d.png)
+
+### AWS Fargate
+- 컨테이너 용 서버리스 컴퓨팅 엔진
+
 
 ### 2.8 Auto Scaling   *중요*
 - 애플리케이션 가용성을 유지하는 데 도움이 되고 정의한 조건에 따라 Amazon EC2용량을 자동으로 확장하거나 축소할 수 있다.
