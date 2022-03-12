@@ -330,7 +330,7 @@ SQL Injection, XSS
 
 ## 11. 인공지능
 
-<img width="368" alt="image" src="https://user-images.githubusercontent.com/81672260/158002966-54bb936a-4fb8-47ef-b001-32148e4c9dfb.png">
+<img width="660" alt="image" src="https://user-images.githubusercontent.com/81672260/158003111-ae3961ad-9e59-45e4-9132-ae3582abd0a6.png">
 
 
 ### 11.1 AWS Lex
@@ -347,4 +347,20 @@ Text -> 음성으로 변환
 
 <img width="677" alt="image" src="https://user-images.githubusercontent.com/81672260/158003072-7b2cd566-9b66-4480-a855-ba569cc6a78d.png">
 
+## 12. 모바일 서비스
+
+### 12.1 AWS Mobile Hub
+
+### 12.2 AWS Cognito
+- 임시 권한
+- 웹 및 모바일 앱에 대한 인증, 권한 부여 및 사용자 관리를 제공
+- 클라이언트가 AWS 서비스에 액세스 할 수 있도록 임시 액세스 자격 증명을 생성 할 수 있으므로 클라이언트 애플리케이션에 장기 자격 증명을 저장할 필요가 없다.
+
+### 12.3 AWS Pinpoint
+
+### 12.4 AWS Device Farm
+
+### 12.5 AWS Mobile SDK
+
+### 12.6 AWS Mobile Analytics
 
