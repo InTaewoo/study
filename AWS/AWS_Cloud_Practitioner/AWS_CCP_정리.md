@@ -328,3 +328,23 @@ SQL Injection, XSS
 - 글루건,,,풀로 붙여서 미리 준비
 
 
+## 11. 인공지능
+
+<img width="368" alt="image" src="https://user-images.githubusercontent.com/81672260/158002966-54bb936a-4fb8-47ef-b001-32148e4c9dfb.png">
+
+
+### 11.1 AWS Lex
+- 대화형 챗봇 서비스
+
+### 11.2 AWS Polly
+Text -> 음성으로 변환
+
+<img width="564" alt="image" src="https://user-images.githubusercontent.com/81672260/158003014-f8c88b83-3990-4133-9260-d0303d5e76c9.png">
+
+### 11.3 AWS Rekognition *중요*
+- 이미지, 비디오 분석
+- 사진에 나타나는 객체를 자동으로 감지
+
+<img width="677" alt="image" src="https://user-images.githubusercontent.com/81672260/158003072-7b2cd566-9b66-4480-a855-ba569cc6a78d.png">
+
+
