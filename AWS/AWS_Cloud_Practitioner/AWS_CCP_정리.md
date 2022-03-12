@@ -488,3 +488,81 @@ Text -> 음성으로 변환
 
 ### 19.24 VPC Flow Logs
 - AWS VPC 인프라에서 `수신 및 발신 트래픽에 대한 정보를 캡처`하는 데 사용할 수 있는 AWS 기능 또는 서비스
+<img width="661" alt="image" src="https://user-images.githubusercontent.com/81672260/158004842-ae81633e-3b98-4782-9317-de8ace70ea86.png">
+
+### 19.25 AWS Support플랜 비교 *중요*
+<img width="657" alt="image" src="https://user-images.githubusercontent.com/81672260/158004916-75fc178e-bf6c-47a7-bf62-b352e1d992b9.png">
+
+- 전체 AWS Trusted Advisor 점검 세트를 제공하는 AWS Support플랜(전체 세트) -> Enterprise / Business
+
+### 19.26 Amazon S3 One Zone-Infrequent Access(S3 One Zone-IA)
+- 자주 엑세스하지 않지만 필요할 때 빠르게 액세스해야 하는 데이터에 적합
+- 가용성 및 복원력이 필요 없는 고객에게 적합 -> 복원력 요구사항이 낮음
+
+### 19.27 AWS Control Tower
+- 안전하게 잘 설계되었으며, 바로 사용할 수 있는 다중계정 AWS환경을 자동화하고 관리
+
+### 19.28 CloudEndure
+
+- CloudEndure기반 자동 재해 복구 출시
+- CloudEndure Disaster Recovery 사용 사례
+
+1. 온프레미스-클라우드 재해 복구
+2. 리전 간 재해 복구
+3. 클라우드 간 재해 복구
+4. 80% 요금 인하(경제적인 복구 서비스)
+
+## 내용 추가
+
+### Amazon EMR (빅 데이터 플랫폼) *중요*
+- 방대한 양의 데이터를 처리하기 위한 클라우드 빅 데이터 플랫폼
+
+### AWS Outpost
+- AWS 서비스를 고객사 전산실에 집어 넣는다고 생각
+- 아래와 같은 이유로 온프레미스에 데이터 센터를 유지할 수 밖에 없음
+ - 네트워크 지연 시간이 민감한 워크로드
+ - 로컬 데이터 : 보안 규정 때문에 건물을 벗어나지 못하는 경우
+ - 로컬 데이터 : 현장에서 대량의 데이터를 처리해야하는 애플리케이션
+
+### AWS 대응 방안
+- AWS 인프라와 서비스를 고객의 데이터센터로 보냄
+- AWS Outposts Rack을 고객사에 완전 조립하여 배송
+- AWS가 설치함 전원과 네트워크만 연결
+- <img width="666" alt="image" src="https://user-images.githubusercontent.com/81672260/158005196-1b53b02f-d54b-4ff1-9b56-49a698eab3e6.png">
+
+### AWS Simple Queue Service(SQS)
+- FIFO 방식으로 선입 선출하는 메시지 서비스
+
+### AWS Amazon Inspector
+- 기타 보안 도구 인 Amazon QuickSight (BI Service)를 읽어야한다.
+
+### AWS Well-Arichitected 프레임 워크, 각 요소 암기 *중요*
+1. 운영 우수성
+2. 보안
+3. 안정성
+4. 성능 효율성
+5. 비용 최적화
+
+### AWS Trusted Advisor *중요*
+1. 고객의 AWS환경을 정밀 조사 -> 권장사항 알려줌
+2. 아래와 같은 베스트 모범사례 자동화 지원
+3. `AWS 계정을 분석하고 권장 사항(베스트 모범사례)를 제공한다.`
+ - 비용최적화
+ - 성능
+ - 보안
+ - 내결함성
+ - 서비스 제한
+
+### Amazon Comprehend. *중요*
+- 자연어 처리 (NLP)에 기계 학습을 사용하고 싶지만 기계 학습 경험이 없는 사용자를 돕기 위해 설계된 AWS 서비스
+- 기계 학습을 사용하여 텍스트 안에 있는 통찰력과 관계를 찾아내는 자연어 처리(NLP)서비스.
+
+### AWS Neptune *중요*
+- 클라우드용으로 구축된 빠르고 안정적인 그래프 데이터 베이스
+- 고성능 그래프 데이터베이스 
+
+## S3 Standard vs S3 Standard IA vs S3 one zone IA 차이 비교 *중요*
+<img width="664" alt="image" src="https://user-images.githubusercontent.com/81672260/158005447-ed97dd74-4e38-4376-b17c-9be7faf44a2d.png">
+
+<img width="678" alt="image" src="https://user-images.githubusercontent.com/81672260/158005481-4907e05b-8cf7-44c7-8f02-424d0aec9408.png">
+
