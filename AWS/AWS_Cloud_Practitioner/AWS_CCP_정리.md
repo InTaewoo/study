@@ -566,3 +566,38 @@ Text -> 음성으로 변환
 
 <img width="678" alt="image" src="https://user-images.githubusercontent.com/81672260/158005481-4907e05b-8cf7-44c7-8f02-424d0aec9408.png">
 
+가격 : AWS Glacier가 가장 저렴
+
+### AWS Direct Connect(DX) *중요*
+- AWS와 데이터 센터, 사무실, 코로케이션 환경 사이에 안정적인 프라이빗 연결
+- AWS <---> 데이터 센터를 Direct Connect로 연결
+
+### VPN과 Direct Connect 비교
+- Direct Connect는 온 프레미스-AWS 연결용, 전용 프라이빗 네트워크 연결
+
+<img width="653" alt="image" src="https://user-images.githubusercontent.com/81672260/158005559-f2b4920a-19b0-4b97-bcdd-9e26f641f95f.png">
+
+### VPC에서 S3, DynamoDB와 같은 곳에 접근하기 위해서는?
+- 인터넷 게이트 웨이를 통해 접근이 가능 -> 다이렉트 접근은 불가
+- <img width="649" alt="image" src="https://user-images.githubusercontent.com/81672260/158005697-f5b30326-f440-443e-93e8-7493299918ed.png">
+
+### AWS Transit Gateway
+
+- AWS에서 온프레미스 외부와 연결하기 위해서는
+1. VPN
+2. Direct Connect
+3. AWS Trasit Gateway를 사용하면 된다.
+
+### Availability Zone in AWS
+- 1개, 1개이상의 물리적 데이터센터를 의미  *중요*
+- 한국의 리전안에, 서울/대전/대구와 같은 의미
+
+### 피어링 연결(Peering Connection)
+- 두개의 서로 다른 VPC간의 네트워크 연결
+- Private IP를 사용하여 두 VPC내의 인스턴스들이 직접 통신할 수 있는 기능을 제공.
+
+### 보안 그룹(Security Group)  *중요*
+
+- Amazon EC2 인스턴스에 대한 가상 방화벽 역할
+Network ACL과 함께 VPC내의 보안을 강화하기 위하여 기본적으로 사용하는 기능, Network ACL과 다르게 Stateful 방화벽으로 동작.
+
