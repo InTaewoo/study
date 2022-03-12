@@ -417,5 +417,68 @@ Text -> 음성으로 변환
 <img width="677" alt="image" src="https://user-images.githubusercontent.com/81672260/158003424-e2e1d8ed-3501-4188-9c25-fea2253d51b3.png">
 
 구성 : 고객/AWS 책임 공유 !
-- AWS : 인프라 장치 구성
-- 고객 : 자체 Guest OS/DB 
+- AWS : 클라우드 인프라 자체
+- 고객 : 자체 Guest OS/DB 클라우드 인프라 위의 보안
+
+### 19.2 비용 할당 태그 - Cost Allocation tags
+- 태깅을 해서 각 부서별 금액이 얼마 나왔는지 알 수 있다.
+
+### 19.3 조직에 대한 통합 결제 - Consolidated builling  *중요*
+통합 결제 -> AWS Organizations
+고객이 여러 AWS 계정을 통합하고 중앙에서 관리하려면 어떤 서비스를 사용해야 합니까?
+-> AWS Organizations
+
+### 19.4 AWS Budgets. *중요*
+- 예산 설정된 한계치 도달하면 알림 경보
+
+### 19.5 APN 기술 파트너 - AWS Partner Network Technology Partners
+
+### 19.6 APN 컨설팅 파트너 - AWS Partner Network Consulting Partners
+
+### 19.7 AWS Cost Explorer - 비용 탐색기
+- 과거의 데이터가 있어야 비용 탐색이 가능
+
+### 19.8 Detailed Billing Report - 상세 비용 보고서
+- 상세한 비용 내용이 보고 싶을때
+
+### 19.11 Virtual Private Gateway
+[site to site VPC]
+
+### 19.12 AWS Simple Monthly Calculator *중요*
+- AWS 없는 고객도 AWS 서비스 예상 비용을 알아볼 수 있다.\
+<img width="627" alt="image" src="https://user-images.githubusercontent.com/81672260/158004446-60cc0bbb-e69e-4ca7-9be3-17a29854a293.png">
+
+### 19.13 AWS 총 소유 비용(TCO)계산기  *중요*
+온 프레미스 -> AWS으로 이전하는데 발생되는 비용 확인할 때 서비스
+
+### 19.14 AWS Professional Services
+
+### 19.15 AWS Artifact *중요*
+- 준수 규정
+- 규정 준수와 관련된 정보를 제공하는 신뢰할 수 있는 중앙 리소스
+- AWS 보안 및 규정 준수 보고서
+
+### 19.16 AWS Schema Conversion Tool
+
+### 19.17 AWS CloudWatch Logs *중요*
+
+### 19.18 AWS Neptune *시험출제*
+
+### 19.19 AWS SageMaker
+
+### 19.20 AWS Machine Imange(AMI)
+- 사용자가 사전 구성된 Amazon EC2인스턴스를 시작할 수 있도록 하는 것
+
+### 19.21 AWS Macie *중요*
+- 개인 식별 정보(PII)와 같은 민감한 데이터를 식별하고 경고하는 데 도움을 준다.
+- 민감한 정보 -> 피자는 맥심
+
+### 19.22 AWS Global Accelerator *중요*
+- 엔드 단 상태 지속 모니터링 -> 즉시 대응 서비스
+- AWS의 방대하고 가용성이 높고 혼잡이 없는 글로벌 네트워크를 사용하여 사용자의 인터넷 트래픽을 AWS리전에서 실행되는 애플리케이션으로 보낸다.
+- Network Load Balancer, Application Load Balancer, EC2 인스턴스 또는 탄력적 IP와 같은
+
+### 19.23 암호화 관련
+1. AWS KMS(AWS Key Management Service)  *중요*
+- 데이터 암호화에 사용되는 암호화 키인 고객 마스터 키 (CMK)를 쉽게 생성하고 제어 할 수 있는 관리형 서비스.
+- 
