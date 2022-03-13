@@ -46,7 +46,7 @@
 - 암 표적에 대해 천 만개의 화합물 실험 39년 -> 9시간
 
 ### 2.6 AWS Elastic Beanstalk
-- Java,.NET, PHP, Node.js, Python, Ruby, Go, Docker를 사용하여 Apache, Nginx, Passenger, IIS(인터넷 정보 서비스) 같은 친숙한 서버에서 개발된 웹 애플리케이션 및 서비스를 배포하고 확장하는 허비흐로서 사용이 간편하다.
+- Java,.NET, PHP, Node.js, Python, Ruby, Go, Docker를 사용하여 Apache, Nginx, Passenger, IIS(인터넷 정보 서비스) 같은 친숙한 서버에서 개발된 웹 애플리케이션 및 서비스를 배포하고 확장하는 로서 사용이 간편하다.
 - 사용자가 코드 및 구성 설정을 제공하면 Elastic Beanstalk이 다음 작업을 수행하는 데 필요한 리소스를 배포한다.
 - 용량 조정
 - 로드 밸런싱
