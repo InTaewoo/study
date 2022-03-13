@@ -293,6 +293,7 @@
 ### 9.7 AWS Key Management Service
 
 ### 9.8 AWS Organizations  *중요*
+- 중앙 위치 에서 여러 AWS 계정을 통합하고 관리
 - 통합된 결제를 추구
 - 각 부서별 계정이 여러개라면 이를 어떻게 인식할까? -> Tag를 이용
 
@@ -301,6 +302,7 @@
 
 
 ### 9.10 AWS WAF *중요*
+- 웹 애플리케이션으로 들어오는 네트워크 요청을 모니터링할 수 있는 웹 애플리케이션 방화벽.
 SQL Injection, XSS
 
 
@@ -476,6 +478,13 @@ Text -> 음성으로 변환
 - 규정 준수와 관련된 정보를 제공하는 신뢰할 수 있는 중앙 리소스
 - AWS 보안 및 규정 준수 보고서
 
+### 19.15.1 AWS Artifact Agreements
+- AWS Artifact Agreements에서 개별 계정 및 AWS Organizations 내 모든 계정에 대한 계약을 검토, 수락 및 관리할 수 있다.
+
+### 19.15.2 AWS Artifact Reports
+- AWS Artifact Reports는 외부 감사 기관이 작성한 규정 준수 보고서를 제공
+
+
 ### 19.16 AWS Schema Conversion Tool
 
 ### 19.17 AWS CloudWatch Logs *중요*
@@ -553,6 +562,11 @@ Text -> 음성으로 변환
 
 ### AWS Amazon Inspector
 - 기타 보안 도구 인 Amazon QuickSight (BI Service)를 읽어야한다.
+- 자동화된 보안 평가를 실행하여 애플리케이션의 보안 및 규정 준수를 개선할 수 있는 서비스.
+
+### Amazon GuardDuty
+- AWS 인프라 및 리소스에 대한 지능형 위협 탐지 기능을 제공하는 서비스.
+- AWS 환경 내의 네트워크 활동 및 계정 동작을 지속적으로 모니터링하여 위협을 식별.
 
 ### AWS Well-Arichitected 프레임 워크, 각 요소 암기 *중요*
 1. 운영 우수성
