@@ -146,6 +146,7 @@
 ### 5.1 AWS Application Discovery Service
 
 ### 5.2 AWS Database Migration Service
+- 관계형 데이터베이스, 비관계형 데이터베이스 및 기타 유형의 데이터 저장소를 마이그레이션할 수 있는 서비스
 
 ### 5.3 AWS Server Migration Service
 - 에이전트 없는 서비스로 수천 개의 온프레미스 워크로드를 AWS로 쉽고 빠르게 마이그레이션 할 수 있게 해준다.
@@ -706,3 +707,19 @@ Network ACL과 함께 VPC내의 보안을 강화하기 위하여 기본적으로
 ### S3 Glacier Deep Archive
 - 보관에 이상적인 가장 저렴한 객체 스토리지 클래스
 - 객체를 12시간 이내에 검색
+
+## 추가 데이터베이스 서비스
+
+### Amazon DocumentDB
+- Amazon DocumentDB는 MongoDB 워크로드를 지원하는 문서 데이터베이스 서비스.
+
+### Amazon Neptune
+- 그래픽 데이터베이스 서비스.
+- Amazon Neptune을 사용하여 추천 엔진, 사기 탐지, 지식 그래프와 같이 고도로 연결된 데이터 세트로 작동하는 애플리케이션을 빌드하고 실행할 수 있습니다.
+
+### Amazon Quantum Ledger Database(Amazon QLDB)
+- QLDB는 원장 데이터베이스이다.
+- QLDB를 사용하여 애플리케이션 데이터에 발생한 모든 변경 사항의 전체 기록을 검토할 수 있다.
+
+### Amazon Managed Blockchain
+- Amazon Managed Blockchain은 오픈 소스 프레임워크를 사용하여 블록체인 네트워크를 생성하고 관리하는 데 사용할 수 있는 서비스입니다. 
