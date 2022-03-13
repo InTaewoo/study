@@ -123,6 +123,8 @@
 - DB 이중화 -> Multi - AZ
 - 클라우드에서 관계형 데이터베이스를 설정, 운영, 확장하기가 쉬워짐.
 - Amazon RDS가 제공하는 엔진 (Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle, Microsoft SQL Server)
+- SQL을 사용하여 데이터 구성
+- Amazon Aurora 데이터베이스에 데이터 저장
 
 ![image](https://user-images.githubusercontent.com/81672260/157566064-e7aee78d-df2d-449b-9678-edc6658efe09.png)
 
@@ -130,7 +132,10 @@
 ### 4.3 AWS DynamoDB  *중요*
 
 - NoSQL DB 서비스
-- 어떤 상황에서든 지연 시간이 일괄적으로 한 자릿수 밀리초 단위여야 하는 모든 애플리케이션을 위한, 빠르고 유연한 NoSQL데이터베이스 서비스이다.
+- 어떤 상황에서든 지연 시간이 일괄적으로 한 자릿수 밀리초 단위여야 하는 모든 애플리케이션을 위한, 빠르고 유연한 NoSQL데이터베이스 서비스.
+- 서버리스 데이터베이스 실행
+- 키-값 데이터베이스에 데이터 저장
+- 하루 최대 10조 개 요청으로 확장
 
 ### 4.4 AWS ElastiCache
 - 데이터베이스 액세스 부하를 줄이는 데 도움이 되는 공통 데이터베이스 쿼리 결과를 저장하는데 가장 적합한 서비스
