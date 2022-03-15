@@ -534,7 +534,7 @@ Text -> 음성으로 변환
 <img width="661" alt="image" src="https://user-images.githubusercontent.com/81672260/158004842-ae81633e-3b98-4782-9317-de8ace70ea86.png">
 
 ### 19.25 AWS Support플랜 비교 *중요*
-<img width="657" alt="image" src="https://user-images.githubusercontent.com/81672260/158004916-75fc178e-bf6c-47a7-bf62-b352e1d992b9.png">
+<img width="702" alt="image" src="https://user-images.githubusercontent.com/81672260/158374270-caa5c284-15af-43b9-900f-247574b6c2c9.png">
 
 - 전체 AWS Trusted Advisor 점검 세트를 제공하는 AWS Support플랜(전체 세트) -> Enterprise / Business
 
