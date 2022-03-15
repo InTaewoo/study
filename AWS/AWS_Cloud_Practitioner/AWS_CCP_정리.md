@@ -836,3 +836,11 @@ Network ACL과 함께 VPC내의 보안을 강화하기 위하여 기본적으로
 - 솔루션 아키텍트와 AWS 파트너가 구축한 자동화된 참조 배포이다.
 - AWS 모범 사례에 따라 AWS에서 인기있는 기술을 배포하는 데 도움이 된다.
 - 수백 개의 수동 절차를 단 몇단계로 줄여 몇분안에 환경을 구성할 수 있다.
+
+## 서버리스 플랫폼 서비스
+- AWS Lambda
+- Amazon S3
+- Amazon DynamoDB
+- Amazon SNS
+- Amazon Kinesis
+- API 게이트웨이
