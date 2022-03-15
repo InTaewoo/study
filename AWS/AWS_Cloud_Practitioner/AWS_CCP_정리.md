@@ -844,3 +844,8 @@ Network ACL과 함께 VPC내의 보안을 강화하기 위하여 기본적으로
 - Amazon SNS
 - Amazon Kinesis
 - API 게이트웨이
+
+## AWS Single Sign-On(AWS SSO)
+- AWS에서 인력 자격 증명을 한 번 생성하거나 연결하고 AWS 조직 전체에서 중앙 집중식으로 액세스를 관리하는 곳.
+- AWS 계정 또는 클라우드 애플리케이션에 대한 액세스만 관리하도록 선택할 수 있다.
+- AWS Directory Service 디렉토리에 조인 된 컴퓨터에서만 사용할 때만 작동한다.
