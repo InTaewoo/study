@@ -224,6 +224,8 @@
 ### 7.2 AWS CodeBuild
 
 ### 7.3 AWS CodeDeploy
+- WS CodeDeploy는 Amazon EC2, AWS Fargate, AWS Lambda 및 온 프레미스 서버와 같은 다양한 컴퓨팅 서비스에 대한 소프트웨어 배포를 자동화하는 완전 관리 형 배포 서비스다.
+- 온 프레미스에서 실행되는 서버에 애플리케이션을 배포하는 데 사용할 수있는 서비스 = AWS OpsWorks
 
 ### 7.4 AWS CodePipeline
 - 빠르고 안정적인 애플리케이션 및 인프라 업데이트용
