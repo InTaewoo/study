@@ -242,7 +242,9 @@
 - 예상 AWS 요금 모니터링 가능
 - AWS 계정에 대한 예상 요금 모니터링 활성화 ON
 
-### 8.2 AWS EC2 Systems Manager
+### 8.2 AWS Systems Manager
+- AWS Systems Manager는 AWS 애플리케이션 및 리소스의 운영 허브이며 4개의 핵심 기능 그룹으로 분류됩니다.(운영 관리, 애플리케이션 관리, 변경 관리, 노드 관리)
+- AWS Systems Manager는 하이브리드 클라우드 환경을 위한 안전한 엔드 투 엔드 관리 솔루션입니다.
 
 ### 8.3 AWS CloudFormation  *중요*
 - Formation 정보
