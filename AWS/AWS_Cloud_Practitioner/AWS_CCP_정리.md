@@ -419,6 +419,8 @@ Text -> 음성으로 변환
 ### 14.1 AWS SQS(Simple Queue Service)
 
 ### 14.2 AWS SNS (Simple Notification Service)
+- 애플리케이션 간(A2A) 및 애플리케이션 간(A2P) 통신을 위한 완전 관리형 메시징 서비스이다.
+- A2A 게시/구독 기능은 분산 시스템, 마이크로서비스 및 이벤트 기반 서버리스 애플리케이션 간의 높은 처리량, 푸시 기반, 다대다 메시징에 대한 주제를 제공합니다
 
 ### 14.3 AWS SES (Simple Email Service)
 
