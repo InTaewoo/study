@@ -643,6 +643,7 @@ Text -> 음성으로 변환
 1. VPN
 2. Direct Connect
 3. AWS Trasit Gateway를 사용하면 된다.
+4. 온프레미스 네트워크를 별도의 AWS 리전에 있는 수많은 VPC에 연결하는 가장 효과적인 접근 방식.
 
 ### Availability Zone in AWS
 - 1개, 1개이상의 물리적 데이터센터를 의미  *중요*
