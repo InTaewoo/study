@@ -321,7 +321,7 @@
 - DDos 방지용
 
 
-### 9.10 AWS WAF *중요*
+### 9.10 AWS WAF(Web Application Firewall) *중요*
 - 웹 애플리케이션으로 들어오는 네트워크 요청을 모니터링할 수 있는 웹 애플리케이션 방화벽.
 SQL Injection, XSS
 
