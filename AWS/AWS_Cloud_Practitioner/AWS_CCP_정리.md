@@ -412,7 +412,8 @@ Text -> 음성으로 변환
 ### 13.1 AWS Step Functions
 
 ### 13.2 AWS API Gateway
-
+- Amazon API Gateway는 어떤 규모에서든 개발자가 API를 손쉽게 생성, 게시, 유지 관리, 모니터링 및 보안 유지할 수 있도록 하는 완전관리형 서비스입니다.
+-  API Gateway를 사용하면 실시간 양방향 통신 애플리케이션이 가능하도록 하는 RESTful API 및 WebSocket API를 작성할 수 있습니다.
 ### 13.3 AWS Elastic Transcoder
 
 ### 13.4 AWS SWF
