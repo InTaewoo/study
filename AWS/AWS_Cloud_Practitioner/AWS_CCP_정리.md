@@ -645,7 +645,8 @@ Text -> 음성으로 변환
 - <img width="649" alt="image" src="https://user-images.githubusercontent.com/81672260/158005697-f5b30326-f440-443e-93e8-7493299918ed.png">
 
 ### AWS Transit Gateway
-
+- Amazon VPC, AWS 계정 및 온프레미스 네트워크를 단일 게이트웨이에 손쉽게 연결
+- 중앙 허브를 통해 AWS Amazon Virtual Private Cloud(VPC)와 온프레미스 네트워크를 연결합니다.
 - AWS에서 온프레미스 외부와 연결하기 위해서는
 1. VPN
 2. Direct Connect
