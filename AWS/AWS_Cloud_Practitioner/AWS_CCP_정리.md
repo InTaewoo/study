@@ -416,9 +416,9 @@ Text -> 음성으로 변환
 -  API Gateway를 사용하면 실시간 양방향 통신 애플리케이션이 가능하도록 하는 RESTful API 및 WebSocket API를 작성할 수 있습니다.
 ### 13.3 AWS Elastic Transcoder
 
-### 13.4 AWS SWF
+### 13.4 AWS SWF(Simple Workflow Service)
 - 분산된 구성 요소 간에 작업을 조정하는 애플리케이션을 쉽게 구축할 수 있다.
-- SWF에서는 진행사항을 추적하고 상태를 유지 
+- SWF에서는 진행사항을 추적하고 상태를 유지 .
 
 ## 14. 메시징
 
