@@ -314,6 +314,9 @@
 ### 9.6 AWS Directory Service
 - 다른 AWS 서비스에서 Microsoft Active Directory(AD)를 사용할 수 있는 몇 가지 방법을 제공합니다
 - 디렉터리는 사용자, 그룹 및 디바이스에 대한 정보를 저장하고, 관리자는 이를 사용하여 정보 및 리소스에 대한 액세스를 관리합니다.
+- 고객이 AWS 콘솔에 대한 SSO(Single Sign-On)를 활성화하는 데 사용할 수 있는 것
+
+
 ### 9.7 AWS Key Management Service
 
 ### 9.8 AWS Organizations  *중요*
