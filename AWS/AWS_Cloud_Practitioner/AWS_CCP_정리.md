@@ -56,6 +56,9 @@
 ### 2.7 AWS Lambda
 - 서버리스, 서버를 프로비저닝 하거나 관리할 필요 없이 코드를 실행할 수 있다.
 - 비용 청구기준(1. 실행시간, 2.요청 수)
+- 이벤트 기반 워크로드
+
+
  ![image](https://user-images.githubusercontent.com/81672260/157180202-cfb0ed7a-c6ac-40cf-a82d-756238a9244d.png)
 
 ### AWS Fargate
