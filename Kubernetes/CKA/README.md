@@ -11,6 +11,4 @@ CKA (Certified Kubernetes Administrator), CKAD (Certified Kubernetes Application
 
 [Exam Simulator]
 시험에 등록하게 되면 Exam Simulator 라고 하는 일종의 Mock test 를 제공해준다. (2021.06.02 부터 제공)
-Udemy 강의를 모두 듣고 시험보기 며칠전엔 Exam Simulator 에 접속해서 제공하는 문제들을 풀어봤다.
-문제에 대한 해설 및 해답도 상세하게 제공해주고 있어 연습하기에 도움이 된다.
-참고로 정해진 시간동안 시험보듯이 푸는 방식인데 실제 시험보다는 난이도가 더 높으므로 다 풀지 못했다고 좌절은 하지 않아도 된다!
+
