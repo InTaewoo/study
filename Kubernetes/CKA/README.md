@@ -70,4 +70,29 @@ https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-te
 - `kubectl` 명령에 대한 셸 자동완성(Bash autocompletion) 기능도 바로 사용할 수 있다.
 - YAML 또는 JSON 작업을 위한 `jp`, 그 밖에 `tmux`와 `curl`,`wget`,`man`이 기본 지원된다.
 
+## vim 설정 파일 추가하기.
+시험 특성상 대부분의 문제 풀이 과정에서 YAML 파일을 편집하게 된다. 따라서 시험이 시작되면 처음 1분을 에디터 환경 편집에 할애하면 좋다.
+
+```
+# tab을 2칸으로 설정
+set tabstop=2
+
+# tab 사용시 발생하는 공백을 띄어쓰기(스페이스)로 채움
+set expandtab
+
+# shift(>, >>, <, << 등)을 2칸으로 설정
+set shiftwidth=2
+```
+
+## 북마크 활용하기
+오픈북 용도로 사용 가능한 URL들을 미리 북마크한 뒤 시험에 이용할 수 있다.
+
+## kubectl 사용
+17개 내외의 문제를 해결하기에 120분의 시간은 조금 빡빡한 편이다. 조금이라도 시간을 절약하려면 가능한 많은 리소스 작업을 `kubectl`명령 만으로 해결할 수 있어야 한다.
+시험에서 다루는 리소스들 가운데 멀티 컨테이너 파드와 PV, PVC, 그리고 NetworkPolicy 정도를 제외하면 대부분 kubectl을 이용하여 빠르게 생성할 수 있다.
+또한 `--dry-run=client -o yaml`플래그와 결합하면 쿠버네티스 공식 문서 없이도 필요한 리소스의 기본 골격을 바로 뽑아서 편집할 수 있게 된다. 쿠버네티스 자격 시험에서 시간 관리의 성패는 결국 `kubectl`을 얼마나 빠르게 잘 활용하느냐에 따라 달려있다.
+
+
+
+
 
