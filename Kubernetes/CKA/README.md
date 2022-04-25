@@ -92,7 +92,7 @@ set shiftwidth=2
 시험에서 다루는 리소스들 가운데 멀티 컨테이너 파드와 PV, PVC, 그리고 NetworkPolicy 정도를 제외하면 대부분 kubectl을 이용하여 빠르게 생성할 수 있다.
 또한 `--dry-run=client -o yaml`플래그와 결합하면 쿠버네티스 공식 문서 없이도 필요한 리소스의 기본 골격을 바로 뽑아서 편집할 수 있게 된다. 쿠버네티스 자격 시험에서 시간 관리의 성패는 결국 `kubectl`을 얼마나 빠르게 잘 활용하느냐에 따라 달려있다.
 
-
+출처 : https://seongjin.me/how-to-prepare-cka-exam/
 
 
 
