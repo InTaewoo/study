@@ -1,5 +1,8 @@
-## CKA,CKAD 정보
-CKA (Certified Kubernetes Administrator), CKAD (Certified Kubernetes Application Developer) 모두 Linux Foundation에서 주관하는 Kubernetes 자격증으로 각각 아래의 web page 에서 신청이 가능하다.
+## CKA 정보
+이번에 Certified Kubernetes Administrator(이하 CKA) 자격증을 취득하기로 했다. 클라우드 엔지니어로 출발하고 싶은 사람으로서 그동안 공부해 온 쿠버네티스 운영 능력을 검증받고 싶기도 했다. CKA 자격증은 이런 내게 꼭 필요한 목표점이 되어 주었다.
+
+CKA 자격증 시험은 쿠버네티스 기술을 관리하는 Linux Foundation 산하의 Cloud Native Computing Foundation(CNCF)에서 주관하며, 컨테이너 관리 도구인 쿠버네티스 클러스터의 관리 능력 검증을 목적으로 한다. 따라서 쿠버네티스 클러스터의 설치와 운영, 내부 리소스 배포 및 네트워크 설정, 그리고 클러스터에 발생한 문제 해결에 이르기까지 넓은 범위의 응용 지식을 다룬다. 또한 단순 이론 암기를 지양하고 철저한 실습 위주로 검증하므로 배움의 과정 자체에서도 얻을 것이 많다.
+
 
  - 응시료 : $375
  - 시험 시간 : 2시간
