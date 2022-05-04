@@ -54,4 +54,7 @@ nodePort: 30080
 selector:
   name: simple-webapp
  ```
-  
+
+```
+kubectl expose deployment simple-webapp-deployment --name=webapp-service --type=NodePort --target-port=8080 --port=8080 --dry-run=client -o yaml > service-definition-1.yaml
+```
