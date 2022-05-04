@@ -44,3 +44,13 @@ kubectl create -f nginx-deployment.yaml
 ```
 kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yaml
 ```
+## Serivce-definition-1.yaml 파일 생성
+Name: webapp-service
+Type: NodePort
+targetPort: 8080
+port: 8080
+nodePort: 30080
+selector:
+  name: simple-webapp
+  
+  
