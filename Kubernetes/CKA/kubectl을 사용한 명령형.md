@@ -35,7 +35,7 @@
 이렇게 하면 pod 레이블을 selector로 사용하지 않고 대신 selector를 app=redis로 가정한다.
 
 ## 노드의 포트 30080에서 파드 nginx의 포트 80을 노출하기 위해 NodePort유형의 nginx라는 서비스를 생성.
-`kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml`
+`kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml` <- 이 방법으로 사용
 
 이렇게 하면 자동으로 파드의 레이블을 selector로 사용하지만 노드 포트를 지정할 수 없다. 서비스를 생성하기 전 수동으로 노드 포트를 추가해야 한다.
 
@@ -44,5 +44,4 @@
 
 위의 두 명령에는 고유한 문제가 있다. 하나는 selector을 수락하지 않지만 다른 하나는 NodePort를 수락하지 않는다.
 `kubectl expose`로 사용하는게 훨씬 유리하다. 노드 포트를 지정해야 하는 경우 동일한 명령을 사용하여 정의 파일을 생
-성하고
-서비스를 생성하기 전에 노드 포트를 수동으로 입력한다.
+성하고서비스를 생성하기 전에 노드 포트를 수동으로 입력한다.
