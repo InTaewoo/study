@@ -27,3 +27,22 @@
 ## YAML파일을 저장하는 방법
 `kubectl create deployment nginx --image=nginx --dry-run-client -o yaml > nginx-deploymeny.yaml
 
+## 서비스
+- 클러스터 IP유형의 redis-service라는 이름을 가진 서비스를 생성하여 포트 6379에서 포트 redis를 노출
+`kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml`
+`kubectl create serivce clusterip redis --tcp=6379:6379 --dry-run=client -o yaml`
+
+이렇게 하면 pod 레이블을 selector로 사용하지 않고 대신 selector를 app=redis로 가정한다.
+
+## 노드의 포트 30080에서 파드 nginx의 포트 80을 노출하기 위해 NodePort유형의 nginx라는 서비스를 생성.
+`kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml`
+
+이렇게 하면 자동으로 파드의 레이블을 selector로 사용하지만 노드 포트를 지정할 수 없다. 서비스를 생성하기 전 수동으로 노드 포트를 추가해야 한다.
+
+`kubectl create service nodeport nginx --tcp:80:80 --node-port=30080 --dry-run=client -o yaml`
+이렇게 하면 파드 레이블을 selector로 사용하지 않는다.
+
+위의 두 명령에는 고유한 문제가 있다. 하나는 selector을 수락하지 않지만 다른 하나는 NodePort를 수락하지 않는다.
+`kubectl expose`로 사용하는게 훨씬 유리하다. 노드 포트를 지정해야 하는 경우 동일한 명령을 사용하여 정의 파일을 생
+성하고
+서비스를 생성하기 전에 노드 포트를 수동으로 입력한다.
