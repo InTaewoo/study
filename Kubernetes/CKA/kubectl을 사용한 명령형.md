@@ -21,7 +21,7 @@
 `kubectl create deployment --image=nginx nginx`
 
 ## 4개의 replicas를 가진 Deployment생성 
-`kubectl create deployment nginx --image=nginx --replicas=4`
+`kubectl create deployment nginx --image=nginx --replicas=4`  
 `kubectl scale deployment nginx --replicas=4`
 
 ## YAML파일을 저장하는 방법
