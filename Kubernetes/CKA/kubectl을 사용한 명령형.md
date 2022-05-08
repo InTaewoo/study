@@ -13,3 +13,14 @@
 
 ## POD 매니페스트 YAML파일을 생성한다.
 `kubectl run nginx --image=nginx --dry-run=client -o yaml`
+
+## Deployment 만들기
+`kubectl create deployment --image=nginx nginx`
+
+### Deployment YAML파일 생성
+`kubectl create deployment --image=nginx nginx`
+
+## 4개의 replicas를 가진 Deployment생성 
+`kubectl create deployment nginx --image=nginx --replicas=4`
+
+
