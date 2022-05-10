@@ -62,3 +62,16 @@ kubectl run bee --image=nginx --dry-run=client -o yaml > bee.yaml
 
 ![image](https://user-images.githubusercontent.com/81672260/167588111-5e8a0364-2177-45bd-b3d9-09fe50a6c463.png)
 
+4. Do you see any taints on controlplane node?
+```
+kubectl describe no controlplane | grep -i taints
+```
+![image](https://user-images.githubusercontent.com/81672260/167588665-2f569a9a-ae51-4a94-bf70-9557b3ac45b4.png)
+
+5. Remove the taint on controlplane, which currently has the taint effect of NoSchedule.
+
+```
+kubectl taint no controlplane node-role.kubernetes.io/master:NoSchedule-
+````
+![image](https://user-images.githubusercontent.com/81672260/167588949-050f4167-6db4-4413-bc3b-71c0cda81ca3.png)
+
