@@ -58,6 +58,7 @@ kubectl run mosquito --image=nginx
 
 ```
 kubectl run bee --image=nginx --dry-run=client -o yaml > bee.yaml
+```
 
 ![image](https://user-images.githubusercontent.com/81672260/167588111-5e8a0364-2177-45bd-b3d9-09fe50a6c463.png)
 
