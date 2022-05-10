@@ -43,9 +43,21 @@ spec:
 
 
 ## 문제 예시 
-- Create a taint on node01 with key of spray, value of mortein and effect of NoSchedule
+1. Create a taint on node01 with key of spray, value of mortein and effect of NoSchedule
 
 ```
 kubectl taint nodes node01 spray=mortein:NoSchedule
 ```
+
+2. Create a new pod with the nginx image and pod name as mosquito
+```
+kubectl run mosquito --image=nginx
+```
+
+3. Create another pod named bee with the nginx image, which has a toleration set to the taint mortein
+
+```
+kubectl run bee --image=nginx --dry-run=client -o yaml > bee.yaml
+
+![image](https://user-images.githubusercontent.com/81672260/167588111-5e8a0364-2177-45bd-b3d9-09fe50a6c463.png)
 
