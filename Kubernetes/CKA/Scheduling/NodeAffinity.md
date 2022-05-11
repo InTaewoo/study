@@ -76,3 +76,17 @@ kubectl get pods --output--wide
 
  - Set Node Affinity to the deployment to place the pods on node01 only.
  
+ ```
+ kubectl create deployment blue --image=nginx --replicas=3 --dry-run=client -o yaml > blue.yaml
+
+ ```
+ ![image](https://user-images.githubusercontent.com/81672260/167808212-35d8d67f-ecd9-4949-a1d4-22a9f218db73.png)
+
+위와 같이 affinity부분을 추가해준다.
+
+```
+kubectl apply -f blue.yaml
+```
+
+ 
+ 
