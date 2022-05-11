@@ -72,3 +72,7 @@ kubectl apply -f pod-nginx-preferred-affinity.yaml
 ```
 kubectl get pods --output--wide
 
+## 예제
+
+ - Set Node Affinity to the deployment to place the pods on node01 only.
+ 
