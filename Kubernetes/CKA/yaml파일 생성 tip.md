@@ -1,12 +1,12 @@
 ## Certification Tip
 
-### Create an NGINX Pod
+### Create an NGINX Pod (파드 만들고 바로 실행)
 
 ```
 kubectl run nginx --image=nginx
 ```
 
-## yaml파일을 만드는 법
+## yaml파일을 만드는 법 (바로 실행하지 않고 yaml파일 생성)
 
 ### Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
 
