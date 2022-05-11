@@ -64,6 +64,7 @@ spec:
 ```
 
 1. 매니페스트를 적용하여 선택한 노드에 스케줄된 파드를 생성한다.
+2. 
 ```
 kubectl apply -f pod-nginx-preferred-affinity.yaml
 ```
@@ -71,13 +72,14 @@ kubectl apply -f pod-nginx-preferred-affinity.yaml
 2. 파드가 선택한 노드에서 실행 중인지 확인.
 ```
 kubectl get pods --output--wide
-
+```
 ## 예제
 
  - Set Node Affinity to the deployment to place the pods on node01 only.
  
  ```
  kubectl create deployment blue --image=nginx --replicas=3 --dry-run=client -o yaml > blue.yaml
+ vi blue.yaml
 
  ```
  ![image](https://user-images.githubusercontent.com/81672260/167808212-35d8d67f-ecd9-4949-a1d4-22a9f218db73.png)
@@ -86,7 +88,9 @@ kubectl get pods --output--wide
 
 ```
 kubectl apply -f blue.yaml
+kubectl get deployment.app
 ```
+![image](https://user-images.githubusercontent.com/81672260/167808709-d6a0081c-77ea-4224-bad6-205f7fb66ca1.png)
 
  
  
