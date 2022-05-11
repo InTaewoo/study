@@ -63,4 +63,12 @@ spec:
     imagePullPolicy: IfNotPresent
 ```
 
+1. 매니페스트를 적용하여 선택한 노드에 스케줄된 파드를 생성한다.
+```
+kubectl apply -f pod-nginx-preferred-affinity.yaml
+```
+
+2. 파드가 선택한 노드에서 실행 중인지 확인.
+```
+kubectl get pods --output--wide
 
