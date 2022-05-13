@@ -42,3 +42,14 @@ containers:
       ```
 - 출력은 Pod의 컨테이너에 256MiB의 메모리 요청과 512MiB의 메모리 제한이 있음을 보여준다.
 Limit Range에서 지정한 기본값이다.
+
+
+## POD 및 Deployment Edit에 대한 참고 사항
+
+### edit 및 pod
+아래 이외의 기존 POD사양은 편집할 수 없다.
+- spec.containers[*].image
+- spec.initContainers[*].image
+- spec.activeDeadlineSeconds
+- 사양 허용
+
