@@ -112,6 +112,7 @@ Use the label key - node-role.kubernetes.io/master - which is already set on the
 ```
 kubectl create deployment red --image=nginx --replicas=2 --dry-run=client -o yaml > red.yaml
 vi red.yaml
+kubectl apply -f red.yaml
 ```
 
 ![image](https://user-images.githubusercontent.com/81672260/168190932-975d43e1-9027-4005-82f6-51bd34c0b4ee.png)
@@ -123,5 +124,5 @@ vi red.yaml
              - matchExpressions:
                - key: node-role.kubernetes.io/master
                  operator: Exists
-                 ```
- 
+``` 
+위와 같이 Affinity 부분을 추가해 준다.
