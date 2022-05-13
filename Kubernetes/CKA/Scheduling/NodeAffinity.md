@@ -64,7 +64,7 @@ spec:
 ```
 
 1. 매니페스트를 적용하여 선택한 노드에 스케줄된 파드를 생성한다.
-2. 
+
 ```
 kubectl apply -f pod-nginx-preferred-affinity.yaml
 ```
@@ -75,7 +75,7 @@ kubectl get pods --output--wide
 ```
 ## 예제
 
- - Set Node Affinity to the deployment to place the pods on node01 only.
+ ### 1. Set Node Affinity to the deployment to place the pods on node01 only.
  
  ```
  kubectl create deployment blue --image=nginx --replicas=3 --dry-run=client -o yaml > blue.yaml
@@ -92,7 +92,7 @@ kubectl get deployment.app
 ```
 ![image](https://user-images.githubusercontent.com/81672260/167808709-d6a0081c-77ea-4224-bad6-205f7fb66ca1.png)
 
--  Create a new deployment named red with the nginx image and 2 replicas, and ensure it gets placed on the controlplane node only.
+### 2. Create a new deployment named red with the nginx image and 2 replicas, and ensure it gets placed on the controlplane node only.
 
 Use the label key - node-role.kubernetes.io/master - which is already set on the controlplane node.
 
