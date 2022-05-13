@@ -92,5 +92,36 @@ kubectl get deployment.app
 ```
 ![image](https://user-images.githubusercontent.com/81672260/167808709-d6a0081c-77ea-4224-bad6-205f7fb66ca1.png)
 
- 
+-  Create a new deployment named red with the nginx image and 2 replicas, and ensure it gets placed on the controlplane node only.
+
+Use the label key - node-role.kubernetes.io/master - which is already set on the controlplane node.
+
+
+- Name: red
+
+- Replicas: 2
+
+- Image: nginx
+
+- NodeAffinity: requiredDuringSchedulingIgnoredDuringExecution
+
+- Key: node-role.kubernetes.io/master
+
+- Use the right operator
+
+```
+kubectl create deployment red --image=nginx --replicas=2 --dry-run=client -o yaml > red.yaml
+vi red.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/168190932-975d43e1-9027-4005-82f6-51bd34c0b4ee.png)
+
+```
+         nodeAffinity:
+           requiredDuringSchedulingIgnoredDuringExecution:
+             nodeSelectorTerms:
+             - matchExpressions:
+               - key: node-role.kubernetes.io/master
+                 operator: Exists
+                 ```
  
