@@ -79,4 +79,18 @@ kubectl describe po elephant
 
 - Memory Limit: 20Mi
 
+```
+kubectl edit po elephant
+```
+에서 Limit를 20MI로 늘려서 저장하면 오류 발생.
 
+![image](https://user-images.githubusercontent.com/81672260/168233506-4a27d8d9-990a-487c-b94d-a5c3e34ef15f.png)
+이 경로에 복사본이 저장되어있음.
+
+```
+cat /tmp/kubectl-edit-147100387.yaml : 아까 수정한 내용이랑 같은 복사본
+kubectl replace --force /tmp/kubectl-edit-147100387.yaml : 전에 사용중인 elephant pod를 지우고 새로운 elephant pod로 대체
+```
+
+
+![image](https://user-images.githubusercontent.com/81672260/168234094-202ad126-4564-4673-b5d5-a2f496f17348.png)
