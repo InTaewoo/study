@@ -29,4 +29,16 @@ spec:
     image: nginx
 ```
 
-- 
+```
+containers:
+- image: nginx
+  imagePullPolicy: Always
+  name: default-mem-demo-ctr
+  resources:
+    limits:
+      memory: 512Mi
+    requests:
+      memory: 256Mi
+      ```
+- 출력은 Pod의 컨테이너에 256MiB의 메모리 요청과 512MiB의 메모리 제한이 있음을 보여준다.
+Limit Range에서 지정한 기본값이다.
