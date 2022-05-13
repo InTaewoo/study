@@ -29,6 +29,7 @@ spec:
     image: nginx
 ```
 
+----
 ```
 containers:
 - image: nginx
@@ -39,7 +40,7 @@ containers:
       memory: 512Mi
     requests:
       memory: 256Mi
-      ```
+ ```
 - 출력은 Pod의 컨테이너에 256MiB의 메모리 요청과 512MiB의 메모리 제한이 있음을 보여준다.
 Limit Range에서 지정한 기본값이다.
 
@@ -52,4 +53,30 @@ Limit Range에서 지정한 기본값이다.
 - spec.initContainers[*].image
 - spec.activeDeadlineSeconds
 - 사양 허용
+
+## 문제
+
+### 1. A pod called rabbit is deployed. Identify the CPU requirements set on the Pod. in the current(default) namespace
+```
+kubectl describe po rabbit
+```
+![image](https://user-images.githubusercontent.com/81672260/168232201-0674e1fc-8aa3-4784-8208-c0ef4de40cef.png)
+
+### 2. Another pod called elephant has been deployed in the default namespace. It fails to get to a running state. Inspect this pod and identify the Reason why it is not running.
+
+```
+kubectl describe po elephant
+```
+![image](https://user-images.githubusercontent.com/81672260/168232704-eaa488d9-cd89-4c60-b2c5-8bb07025f850.png)
+
+* OOMKilled = 메모리 부족으로 pod limit를 늘려야한다.
+
+### 3.The elephant pod runs a process that consume 15Mi of memory. Increase the limit of the elephant pod to 20Mi. Delete and recreate the pod if required. Do not modify anything other than the required fields.
+
+- Pod Name: elephant
+
+- Image Name: polinux/stress
+
+- Memory Limit: 20Mi
+
 
