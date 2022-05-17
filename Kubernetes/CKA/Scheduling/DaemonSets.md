@@ -26,7 +26,7 @@ Deployment -> Daemonset, replicas=1 , strategy: {} ,  status: {} 삭제
 
 ![image](https://user-images.githubusercontent.com/81672260/168710334-1ce085fa-d5cd-4d28-bf9f-d2006e0932f0.png)
 
-* 쿠버네티스 공식 문서 참고하여 yaml 수정
+* 쿠버네티스 [공식 문서](https://kubernetes.io/ko/docs/concepts/workloads/controllers/daemonset/) 참고하여 yaml 수정
 ```
 apiVersion: apps/v1
 kind: DaemonSet
