@@ -21,7 +21,8 @@ vi elasticsearch.yaml
 
 에서
 
-replicas=1 , strategy: {} ,  status: {} 삭제
+Deployment -> Daemonset, replicas=1 , strategy: {} ,  status: {} 삭제
 
 
-![image](https://user-images.githubusercontent.com/81672260/168709718-5d4f1e9b-68fc-4ec3-94bf-0c05897359f4.png)
+![image](https://user-images.githubusercontent.com/81672260/168710334-1ce085fa-d5cd-4d28-bf9f-d2006e0932f0.png)
+
