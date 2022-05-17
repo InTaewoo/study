@@ -4,3 +4,29 @@ kubelet 이 각각의 스태틱 파드를 감시한다. (만약 실패할 경우
 - 스태틱 파드는 항상 특정 노드에 있는 하나의 kubelet에 매여 있다.
 - Kubelet 은 각각의 스태틱 파드에 대하여 쿠버네티스 API 서버에서 미러 파드(mirror pod)를 생성하려고 자동으로 시도한다.
 - 즉, 노드에서 구동되는 파드는 API 서버에 의해서 볼 수 있지만, API 서버에서 제어될 수는 없다.
+
+## 스태틱 파드 생성하기
+
+1. 스태틱 파드를 실행할 노드를 선택한다. 이 예제에서는 `my-model`이다.
+2.  /etc/kubelet.d 와 같은 디렉터리를 선택하고 웹 서버 파드의 정의를 해당 위치에, 예를 들어 /etc/kubelet.d/static-web.yaml 에 배치한다.
+
+```
+mkdir /etc/kubelet.d/
+cat <<EOF  > /etc/kubelet.d/static-web.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-web
+  labels:
+    role: myrole
+spec:
+  containers:
+    - name: web
+      image: nginx
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
+EOF
+```
