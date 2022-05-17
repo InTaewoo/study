@@ -30,3 +30,15 @@ spec:
           protocol: TCP
 EOF
 ```
+
+3. 노드에서 kubelet 실행 시에 --pod-manifest-path=/etc/kubelet.d/ 와 같이 인자를 제공하여 해당 디렉터리를 사용하도록 구성한다. Fedora 의 경우 이 줄을 포함하기 위하여 /etc/kubernetes/kubelet 파일을 다음과 같이 수정한다.
+
+```
+KUBELET_ARGS="--cluster-dns=10.254.0.10 --cluster-domain=kube.local --pod-manifest-path=/etc/kubelet.d/"
+```
+혹은 kubelet 구성 파일에 `staticPodPath: <the directory>`를 추가한다.
+
+4. kubelet을 재시작한다.
+```
+systemctl restart kubelet
+```
