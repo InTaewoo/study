@@ -63,4 +63,11 @@ cat /var/lib/kubelet/config.yaml
 ```
 ![image](https://user-images.githubusercontent.com/81672260/168935323-8a891795-a617-4a06-a0b4-2a81db20cb65.png)
 
-staticPodPathL /etc/kubernetes/manifests가 있다
+staticPodPath: /etc/kubernetes/manifests가 있다
+
+### 3.How many pod definition files are present in the manifests folder?
+
+```
+cd /etc/kubernetes/manifests
+ls
+```
