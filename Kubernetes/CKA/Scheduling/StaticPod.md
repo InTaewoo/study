@@ -84,4 +84,35 @@ kubectl get po
 
 ![image](https://user-images.githubusercontent.com/81672260/168959928-77777bef-f621-453f-ada4-00bcfb2e20dd.png)
 
+### 5. We just created a new static pod named static-greenbox. Find it and delete it.
+
+```
+kubectl get po 
+kubectl delete po static-greenbox-node01 -> 삭제 불가능, 매니테스트 경로에 가서 yaml 파일 삭제을 해야 함.
+```
+![image](https://user-images.githubusercontent.com/81672260/168963915-763ad638-9866-4aa0-8141-af0e453a524e.png)
+
+- yaml 파일 찾기
+
+```
+cat /var/lib/kubelet/config.yaml
+```
+![image](https://user-images.githubusercontent.com/81672260/168964068-b32f8cc1-19a6-4764-8fa6-2812d9216d03.png)
+
+![image](https://user-images.githubusercontent.com/81672260/168964108-06c01d0e-1f82-4e13-8366-3b20687fa1ed.png)
+하지만 경로에 들어가보니 `static-greenbox` yaml파일이 없음. -> 노드에 접속하여 확인
+
+```
+kubectl get no -o wide
+ssh 10.6.187.9
+cat /var/lib/kubelet/config.yaml
+cd /etc/just-to-mess-with-you
+ls
+rm greenbox.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/168964249-6cc75688-d71b-4186-979c-8249ec8f7fdd.png)
+
+![image](https://user-images.githubusercontent.com/81672260/168964360-f555790d-7042-41cb-b39e-f32c7aaaa44b.png)
+
 
