@@ -71,3 +71,5 @@ staticPodPath: /etc/kubernetes/manifests가 있다
 cd /etc/kubernetes/manifests
 ls
 ```
+
+### 4.Create a static pod named static-busybox that uses the busybox image and the command sleep 1000
