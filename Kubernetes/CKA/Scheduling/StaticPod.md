@@ -56,3 +56,11 @@ kubectl get po kube-apiserver-controlplane -n kube-system -o yaml : yaml 파일�
 
 - 파드 이름 중 -controlplane 이 들어가는 파드가 static pod 이다.
 - 자세히 확인해 보려면 하나씩 파드를 열어본다.
+
+### 2. What is the path of the directory holding the static pod definition files?
+```
+cat /var/lib/kubelet/config.yaml
+```
+![image](https://user-images.githubusercontent.com/81672260/168935323-8a891795-a617-4a06-a0b4-2a81db20cb65.png)
+
+staticPodPathL /etc/kubernetes/manifests가 있다
