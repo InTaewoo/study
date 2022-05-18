@@ -42,3 +42,17 @@ KUBELET_ARGS="--cluster-dns=10.254.0.10 --cluster-domain=kube.local --pod-manife
 ```
 systemctl restart kubelet
 ```
+
+## 예제
+
+### 1. How many static pods exist in this cluster in all namespaces?
+
+```
+kubectl get po -A
+kubectl get po kube-apiserver-controlplane -n kube-system -o yaml : yaml 파일로 열어서 kind를 확인
+```
+
+![image](https://user-images.githubusercontent.com/81672260/168933913-f57cd0f8-d186-4331-8807-3547d82149bc.png)
+
+- 파드 이름 중 -controlplane 이 들어가는 파드가 static pod 이다.
+- 자세히 확인해 보려면 하나씩 파드를 열어본다.
