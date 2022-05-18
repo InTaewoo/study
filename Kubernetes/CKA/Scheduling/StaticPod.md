@@ -109,10 +109,13 @@ cat /var/lib/kubelet/config.yaml
 cd /etc/just-to-mess-with-you
 ls
 rm greenbox.yaml
+kubectl get po
 ```
 
 ![image](https://user-images.githubusercontent.com/81672260/168964249-6cc75688-d71b-4186-979c-8249ec8f7fdd.png)
 
 ![image](https://user-images.githubusercontent.com/81672260/168964360-f555790d-7042-41cb-b39e-f32c7aaaa44b.png)
 
+![image](https://user-images.githubusercontent.com/81672260/168964613-68445e76-3bd7-4a2f-ba89-9e071714eeae.png)
 
+삭제된 걸 확인
