@@ -73,3 +73,15 @@ ls
 ```
 
 ### 4.Create a static pod named static-busybox that uses the busybox image and the command sleep 1000
+
+```
+cd /etc/kubernetes/manifests/ 경로로 이동
+
+kubectl run static-busybox --image=busybox --dry-run=client -o yaml --command -- sleep 1000 > static-busybox.yaml  : command 명령문은 항상 마지막에 실행
+kubectl get po
+```
+![image](https://user-images.githubusercontent.com/81672260/168959964-695c6d4c-5e77-4f9c-b560-1ffaeec4a77c.png)
+
+![image](https://user-images.githubusercontent.com/81672260/168959928-77777bef-f621-453f-ada4-00bcfb2e20dd.png)
+
+
