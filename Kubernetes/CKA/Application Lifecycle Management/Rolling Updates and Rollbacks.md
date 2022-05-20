@@ -47,3 +47,27 @@ kubectl rollout undo deployment/myapp-deployment
 
 ![image](https://user-images.githubusercontent.com/81672260/169450152-56a055b9-bf14-4ea1-beb2-665f37939954.png)
 
+## 예제
+
+### 1.Let us try that. Upgrade the application by setting the image on the deployment to kodekloud/webapp-color:v2
+- Deployment Name: frontend
+- Deployment Image: kodekloud/webapp-color:v2
+
+```
+kubectl edit deployments.apps frontend
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169458341-da05ac98-d401-4124-9ad8-f7a22e136163.png)
+
+### 2.Change the deployment strategy to Recreate Delete and re-create the deployment if necessary. Only update the strategy type for the existing deployment.
+
+- Deployment Name: frontend
+
+- Deployment Image: kodekloud/webapp-color:v2
+
+- Strategy: Recreate
+
+```
+kubectl describe deployments.app frontend
+```
+![image](https://user-images.githubusercontent.com/81672260/169459131-f3d86381-b7d3-4fe1-8c21-c904e331c625.png)
