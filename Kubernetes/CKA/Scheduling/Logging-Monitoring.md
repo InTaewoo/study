@@ -13,3 +13,16 @@ kubectl top node
 kubectl top pod
 ```
 를 통하여 파드와 노드 성능 모니터링한다.
+
+
+## 예제
+
+### 1. A user - USER5 - has expressed concerns accessing the application. Identify the cause of the issue. Inspect the logs of the POD
+
+```
+kubectl get po
+kubectl logs webapp-1
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169426467-0b7d2e3a-85f1-4a33-9c61-a0b661d51cd7.png)
+
