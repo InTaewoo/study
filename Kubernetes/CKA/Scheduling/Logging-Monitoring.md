@@ -26,3 +26,15 @@ kubectl logs webapp-1
 
 ![image](https://user-images.githubusercontent.com/81672260/169426467-0b7d2e3a-85f1-4a33-9c61-a0b661d51cd7.png)
 
+### 2. A user is reporting issues while trying to purchase an item. Identify the user and the cause of the issue. Inspect the logs of the webapp in the POD
+
+```
+kubectl get po
+kubectl logs webapp-2 
+kubectl logs webapp-2 simple-webapp
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169426689-cee6c693-cf7c-411a-8ea3-cc0de75909c5.png) -> 오류 발생
+
+![image](https://user-images.githubusercontent.com/81672260/169426787-50f670d0-1ce5-41d4-893c-b99a74352e4a.png)
+
