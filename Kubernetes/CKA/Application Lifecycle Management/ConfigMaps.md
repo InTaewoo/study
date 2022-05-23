@@ -63,3 +63,29 @@ envFrom:
 - ENV 방식
 - SINGLE ENV 방식
 - VOLUME 방식
+
+## 예제
+
+### 1. What is the environment variable name set on the container in the pod?
+```
+kubectl get po
+kubectl describe po webapp-color
+```
+![image](https://user-images.githubusercontent.com/81672260/169746266-80ed797a-f685-4f9a-82fc-aea05f2c48cf.png)
+
+### 2. What is the value set on the environment variable APP_COLOR on the container in the pod?
+
+```
+kubectl get po
+kubectl describe po webapp-color
+```
+
+### 3. Update the environment variable on the POD to display a green background
+Note: Delete and recreate the POD. Only make the necessary changes. Do not modify the name of the Pod.
+
+
+- Pod Name: webapp-color
+- Label Name: webapp-color
+- Env: APP_COLOR=green
+
+
