@@ -31,3 +31,25 @@ kubectl apply -f ubuntu-sleeper-2.yaml
 
 ![image](https://user-images.githubusercontent.com/81672260/169726682-cd9ecdcf-ebd5-40e2-967d-c19205d02010.png)
 
+### 3. Create a pod using the file named ubuntu-sleeper-3.yaml. There is something wrong with it. Try to fix it!
+
+Note: Only make the necessary changes. Do not modify the name.
+
+```
+vi ubuntu-sleeper-3.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169726849-8f99ffcd-f32e-4a93-baaa-b1ccd802cf15.png)
+
+1200 -> "1200"
+
+### 4. Inspect the file Dockerfile given at /root/webapp-color directory. What command is run at container startup?
+
+```
+cd webapp-color
+vi Dockerfile
+```
+![image](https://user-images.githubusercontent.com/81672260/169727206-f563f955-9c2f-4363-916a-c7adcdbada1b.png)
+
+ENTRYPOINT ["python","app.py"]
+
