@@ -9,3 +9,15 @@ docker run ubuntu sleep 5
 ```
 
 - 이렇게 하면 컨테이너가 시작될 때 절전 프로그램을 실행하고 5초 동안 기다린 다음 종료된다.
+
+## 예제
+
+### 1. What is the command used to run the pod ubuntu-sleeper?
+
+```
+kubectl edit po ubuntu-sleeper
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169726240-d00feae7-5b99-4b92-9b65-d422baf344c9.png)
+
+
