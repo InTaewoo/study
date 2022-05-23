@@ -63,3 +63,45 @@ envFrom:
 ![image](https://user-images.githubusercontent.com/81672260/169763496-41ed2fbd-d845-4bd9-9f68-dcf18d810592.png)
 
 
+## 예제
+
+### 1. What is the type of the default-token secret?
+
+```
+kubectl get secrets
+kubectl describe secrets default-token-sb8mj
+```
+![image](https://user-images.githubusercontent.com/81672260/169766364-7a0fef30-f2c3-45c8-bf33-8c3c5f8a2f31.png)
+
+### 2. Which of the following is not a secret data defined in default-token secret?
+
+![image](https://user-images.githubusercontent.com/81672260/169766872-d99d9f7a-36e8-44f5-a3ec-904e67ffe0b6.png)
+
+token, ca.crt, namespace 는 secret이고 Type은 secret이 아니다.
+
+### 3. secret with the data given below. You may follow any one of the methods discussed in lecture to create the secret.
+
+- Secret Name: db-secret
+- Secret 1: DB_Host=sql01
+- Secret 2: DB_User=root
+- Secret 3: DB_Password=password123
+
+```
+kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123
+```
+
+### 4.Configure webapp-pod to load environment variables from the newly created secret.
+Delete and recreate the pod if required.
+
+
+- Pod name: webapp-pod
+- Image name: kodekloud/simple-webapp-mysql
+- Env From: Secret=db-secret
+
+```
+kubectl get po
+kubectl get secrets
+kubectl edit po webapp-pod
+kubectl replace --force -f /tmp/kubectl-edit-2946078989.yaml
+```
+![image](https://user-images.githubusercontent.com/81672260/169770772-831bc451-da5f-4b8e-b5c7-37df9d65b5f7.png)
