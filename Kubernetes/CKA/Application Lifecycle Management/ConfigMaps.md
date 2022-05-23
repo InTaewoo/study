@@ -83,9 +83,24 @@ kubectl describe po webapp-color
 ### 3. Update the environment variable on the POD to display a green background
 Note: Delete and recreate the POD. Only make the necessary changes. Do not modify the name of the Pod.
 
-
 - Pod Name: webapp-color
 - Label Name: webapp-color
 - Env: APP_COLOR=green
+
+```
+kubectl get po
+kubectl edit po webapp-color
+```
+![image](https://user-images.githubusercontent.com/81672260/169753940-8b6dea56-d846-4c7c-94f2-54cabb02e246.png)
+![image](https://user-images.githubusercontent.com/81672260/169754059-64349875-f4e8-4da7-a7fc-bde9dd482b8d.png)
+
+-> 저장 불가 오류 발생, 임시 저장 경로로 들어가 파드 생성
+
+```
+kubectl replace --force -f /tmp/kubectl-edit-227753831.yaml
+```
+![image](https://user-images.githubusercontent.com/81672260/169754226-1f582c65-1448-4ca4-a395-de4eb7ea724c.png)
+
+
 
 
