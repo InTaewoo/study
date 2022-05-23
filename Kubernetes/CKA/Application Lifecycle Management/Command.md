@@ -21,3 +21,13 @@ kubectl edit po ubuntu-sleeper
 ![image](https://user-images.githubusercontent.com/81672260/169726240-d00feae7-5b99-4b92-9b65-d422baf344c9.png)
 
 
+### 2. Create a pod with the ubuntu image to run a container to sleep for 5000 seconds. Modify the file ubuntu-sleeper-2.yaml.
+Note: Only make the necessary changes. Do not modify the name.
+
+```
+vi ubuntu-sleeper-2.yaml
+kubectl apply -f ubuntu-sleeper-2.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169726682-cd9ecdcf-ebd5-40e2-967d-c19205d02010.png)
+
