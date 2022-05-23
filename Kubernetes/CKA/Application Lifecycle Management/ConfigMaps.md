@@ -101,6 +101,40 @@ kubectl replace --force -f /tmp/kubectl-edit-227753831.yaml
 ```
 ![image](https://user-images.githubusercontent.com/81672260/169754226-1f582c65-1448-4ca4-a395-de4eb7ea724c.png)
 
+### 4. How many ConfigMaps exists in the default namespace?
+```
+kubectl get configmaps
+```
+
+### 5. Identify the database host from the config map db-config
+
+```
+kubectl describe configmaps db-config
+```
+![image](https://user-images.githubusercontent.com/81672260/169754594-8ed05ae8-aa7e-4309-a2a7-817f3c1817fb.png)
+
+### 6. Create a new ConfigMap for the webapp-color POD. Use the spec given below.
+- ConfigName Name: webapp-config-map
+- Data: APP_COLOR=darkblue
+
+```
+kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue
+```
+
+### 7. Update the environment variable on the POD to use the newly created ConfigMap
+Note: Delete and recreate the POD. Only make the necessary changes. Do not modify the name of the Pod.
+
+- Pod Name: webapp-color
+- EnvFrom: webapp-config-map
+
+```
+kubectl get po
+kubectl edti po webapp-color
+kubectl replace --force -f /tmp/kubectl-edit-3449481916.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169756339-98c504b2-7578-4f88-be4b-908e4c942f48.png)
+
 
 
 
