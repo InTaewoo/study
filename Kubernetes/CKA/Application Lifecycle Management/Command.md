@@ -53,3 +53,32 @@ vi Dockerfile
 
 ENTRYPOINT ["python","app.py"]
 
+### 5. Inspect the file Dockerfile2 given at /root/webapp-color directory. What command is run at container startup?
+
+![image](https://user-images.githubusercontent.com/81672260/169727322-e83482b0-8dbf-4f18-90aa-5172a2ff8505.png)
+
+CMD ["--color", "red"]
+
+
+### 6. Inspect the two files under directory webapp-color-2. What command is run at container startup?
+Assume the image was created from the Dockerfile in this folder.
+
+```
+cd webapp-color-2
+vi webapp-color-pod.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169728312-f59400fb-ca83-4f89-8e37-b64ddf88d2b0.png)
+
+
+### 7. Inspect the two files under directory webapp-color-3. What command is run at container startup?
+Assume the image was created from the Dockerfile in this folder.
+
+```
+vi /root/webapp-color-3/webapp-color-pod-2.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169728584-20a3e578-7c95-416d-8bc1-a1f5bb9b0583.png)
+
+
+
