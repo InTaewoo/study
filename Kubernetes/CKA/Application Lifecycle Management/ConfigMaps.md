@@ -13,7 +13,7 @@
 
 ## Create ConfigMaps
 
-1. 명령적 방식 - ConfigMaps 정의 파일을 사용하지 않고 Config를 사용하여 새성
+1. 명령적 방식 - ConfigMaps 정의 파일을 사용하지 않고 Config를 사용하여 생성
 
 ```
 kubectl create configmap <config-name> --from-literal=<key>=<value>   : configmap 생성 틀
@@ -22,5 +22,44 @@ kubectl create configmap app-config --from-literal=APP_COLOR=blue --from-literal
 
 kubectl create configmap app-config --from-file=app_config.properties
 
+kubectl create -f config-map.yaml
+
 ```
 
+![image](https://user-images.githubusercontent.com/81672260/169744057-e743f873-4be8-456a-967b-1f78deee493a.png)
+
+```
+apiVersion: v1
+kind : ConfigMap
+metadata: 
+  name: app-config
+data:
+  APP_COLOR: blue
+  APP_MODE: prod
+```
+
+### View ConfigMaps
+
+```
+kubectl get cofigmaps
+kubectl describe configmaps
+```
+
+2. 파드 정의 파일에 환경 변수를 삽입하여 새 속성을 추가한다.
+
+
+![image](https://user-images.githubusercontent.com/81672260/169744543-ce0e1bdf-3097-4f58-8d99-90d4af4ded8a.png)
+
+- 이전에 생성한 config-map.yaml을 파드 정의 파일에 삽입하는 방식이다.
+
+```
+envFrom:
+  - configMapRef:
+      name: app-config
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169744821-c2d77da1-9dbb-4967-9678-567111ce583c.png)
+
+- ENV 방식
+- SINGLE ENV 방식
+- VOLUME 방식
