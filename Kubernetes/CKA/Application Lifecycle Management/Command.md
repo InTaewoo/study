@@ -81,4 +81,18 @@ vi /root/webapp-color-3/webapp-color-pod-2.yaml
 ![image](https://user-images.githubusercontent.com/81672260/169728584-20a3e578-7c95-416d-8bc1-a1f5bb9b0583.png)
 
 
+### 8. Create a pod with the given specifications. By default it displays a blue background. Set the given command line arguments to change it to green
+
+- Pod Name: webapp-green
+- Image: kodekloud/webapp-color
+- Command line arguments: --color=green
+
+```
+vi webapp-color-pod.yaml
+command: ["--color","green"] --> args: ["--color","green"]
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169729134-8c5a45bf-b5d2-407c-89fb-42a0ce36ae2d.png)
+
+
 
