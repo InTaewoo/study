@@ -38,7 +38,7 @@ kubectl get secrets
 kubectl describe secrets
 ```
 
-### Decode Secrets
+## Decode Secrets
 - 개인 정보 암호화 해제
 ![image](https://user-images.githubusercontent.com/81672260/169762838-5b61e533-981e-428d-ae73-1c0e81358b73.png)
 
@@ -48,3 +48,18 @@ echo -n 'bXlzcWw' | base64
 echo -n 'cm9vdA' | base64
 echo -n 'cGFzdJk' | base64
 ```
+
+## Secret in Pods
+- 파드 정의 파일에 추가하기
+
+![image](https://user-images.githubusercontent.com/81672260/169763233-439225d0-e560-410d-b75c-f02573e88d2d.png)
+
+```
+envFrom:
+  - secretRef:
+      name: app-secret  --> secret-data.yaml에서 secret의 이름
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169763496-41ed2fbd-d845-4bd9-9f68-dcf18d810592.png)
+
+
