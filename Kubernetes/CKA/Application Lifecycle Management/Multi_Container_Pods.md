@@ -18,3 +18,36 @@ kubectl apply -f yellow.yaml
 ```
 ![image](https://user-images.githubusercontent.com/81672260/169929260-6a8b1401-8123-49ad-8f85-412a5273be01.png)
 
+### 2.Inspect the app pod and identify the number of containers in it.
+It is deployed in the elastic-stack namespace.
+
+```
+kubectl get po
+kubectl describe po app -n elastic-stack
+```
+![image](https://user-images.githubusercontent.com/81672260/169948788-bedbef66-ae1c-4ced-ab06-b8bfc717f860.png)
+
+컨테이너는 app 한개이다.
+
+### 3. The application outputs logs to the file /log/app.log. View the logs and try to identify the user having issues with Login.
+Inspect the log file inside the pod.
+
+```
+kubectl logs app -n elastic-stack
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169949417-fc68f135-e10b-4f25-85fb-09247abd56ef.png)
+
+로그인 관련 이슈는 USER5 이다.
+
+### 4.Edit the pod to add a sidecar container to send logs to Elastic Search. Mount the log volume to the sidecar container.
+Only add a new container. Do not modify anything else. Use the spec provided below.
+
+
+- Name: app
+- Container Name: sidecar
+- Container Image: kodekloud/filebeat-configured
+- Volume Mount: log-volume
+- Mount Path: /var/log/event-simulator/
+- Existing Container Name: app
+- Existing Container Image: kodekloud/event-simulator
