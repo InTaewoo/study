@@ -1,3 +1,44 @@
+## 공유 볼륨을 이용하여 동일한 파드의 컨테이너 간에 통신하기
+
+### 두 개의 컨테이너를 실행하는 파드 생성
+- 이 실습에서 두 개의 컨테이너를 실행하는 파드를 생성한다. 이 컨테이너들은 통신에 사용할 수 있는 볼륨을 공유한다.
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: two-containers
+spec:
+
+  restartPolicy: Never
+
+  volumes:
+  - name: shared-data
+    emptyDir: {}
+
+  containers:
+
+  - name: nginx-container
+    image: nginx
+    volumeMounts:
+    - name: shared-data
+      mountPath: /usr/share/nginx/html
+
+  - name: debian-container
+    image: debian
+    volumeMounts:
+    - name: shared-data
+      mountPath: /pod-data
+    command: ["/bin/sh"]
+    args: ["-c", "echo debian 컨테이너에서 안녕하세요 > /pod-data/index.html"]
+```
+
+
+
+
+
+
+
 ## 예제
 
 ### 1. Create a multi-container pod with 2 containers.
