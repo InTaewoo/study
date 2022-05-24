@@ -51,3 +51,15 @@ Only add a new container. Do not modify anything else. Use the spec provided bel
 - Mount Path: /var/log/event-simulator/
 - Existing Container Name: app
 - Existing Container Image: kodekloud/event-simulator
+
+![image](https://user-images.githubusercontent.com/81672260/169949715-689b5a01-eec2-4c80-b747-98e673cf4137.png)
+
+
+```
+kubectl get po
+kubectl edit po -n elastic-stack
+kubectl replace --force -f /tmp/kubectl-edit-1517766217.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/169952107-1c4e4495-960d-41c2-97a7-134f2d4397e5.png)
+
