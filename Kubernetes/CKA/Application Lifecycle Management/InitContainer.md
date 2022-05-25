@@ -65,5 +65,27 @@ k describe po purple
 
 답 : 600초 + 1200초 = 30Minutes
 
+### 4.Update the pod red to use an initContainer that uses the busybox image and sleeps for 20 seconds
+Delete and re-create the pod if necessary. But make sure no other configurations change.
+CheckCompleteIncomplete
 
+- Pod: red
+- initContainer Configured Correctly
+
+```
+kubectl edit po red
+kubectl replace --force -f /tmp/kubectl-edit-2173215379.yaml
+kubectl get po
+```
+
+### 5. A new application orange is deployed. There is something wrong with it. Identify and fix the issue.
+Once fixed, wait for the application to run before checking solution.
+
+```
+k get po orange
+k edit po orange
+kubectl replace --force -f /tmp/kubectl-edit-1597896501.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/170162756-a3aefd3a-6c66-4f4f-9cc9-dc649a7cd918.png)
 
