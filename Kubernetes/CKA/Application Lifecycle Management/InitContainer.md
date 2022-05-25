@@ -89,3 +89,4 @@ kubectl replace --force -f /tmp/kubectl-edit-1597896501.yaml
 
 ![image](https://user-images.githubusercontent.com/81672260/170162756-a3aefd3a-6c66-4f4f-9cc9-dc649a7cd918.png)
 
+sleeeep2 -> sleep2 로 변경
