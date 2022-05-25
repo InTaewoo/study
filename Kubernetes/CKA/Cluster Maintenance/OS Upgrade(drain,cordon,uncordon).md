@@ -33,3 +33,43 @@ cordon 명령을 실행하면 선택한 특정 노드가 SchedulingDisabled 상�
 
 * 참고로 --ignore-daemonsets 옵션을 추가해주지 않고 drain을 사용하게 되면 아래와 같이 에러가 발생 합니다. daemonsets은 각 노드들에 하나씩 실행되기 때문에 다른 노드로 옮기수가 없어 발생하는 에러 입니다. 
 
+
+## 예제
+
+### 1. We need to take node01 out for maintenance. Empty the node of all applications and mark it unschedulable.
+
+- Node node01 Unschedulable
+- Pods evicted from node01
+
+```
+k get po -o wide
+k cordon node01
+k drain node01 --ignore-daemonsets
+k get no
+```
+
+![image](https://user-images.githubusercontent.com/81672260/170185546-50473374-74de-4927-81a0-7d83996b9fda.png)
+
+
+### 2. The maintenance tasks have been completed. Configure the node node01 to be schedulable again.
+- Node01 is Schedulable
+
+```
+k get no
+k uncordon node01
+k get no
+```
+
+![image](https://user-images.githubusercontent.com/81672260/170185822-5adf6b6c-76b3-488c-8d3f-b51d8992f088.png)
+
+### 3.hr-app is a critical app and we do not want it to be removed and we do not want to schedule any more pods on node01.
+Mark node01 as unschedulable so that no new pods are scheduled on this node.
+Make sure that hr-app is not affected.
+
+- Node01 Unschedulable
+- hr-app still running on node01?
+
+```
+k cordon node01
+```
+
