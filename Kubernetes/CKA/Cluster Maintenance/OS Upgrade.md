@@ -23,3 +23,13 @@ cordon 명령을 실행하면 선택한 특정 노드가 SchedulingDisabled 상�
 
 ![image](https://user-images.githubusercontent.com/81672260/170183142-a8b65024-b6dc-45d3-8fe2-204bff16f49f.png)
 
+## uncordon
+- SchedulingDisabled를 해제하고 싶다면 uncordon을 사용하시면 된다. (아래 drain에서도 마찬가지다.)
+![image](https://user-images.githubusercontent.com/81672260/170183266-6bfb88ec-68eb-4b77-b202-186bd768df6b.png)
+
+## drain
+- drain은 cordon이랑 똑같이 동작하지만, SchedulingDisabled된 노드에 남아있는 Pod를 모두 삭제하고 재생성 하는 등의 기능이 추가된 것.
+- kubectl drain [노드네임] --ignore-daemonsets 을 입력하면 아래와 이미지와 같이 실행이 됩니다. 참고로 선택하는 노드는 SchedulingDisabled가 될 노드 이다.
+
+* 참고로 --ignore-daemonsets 옵션을 추가해주지 않고 drain을 사용하게 되면 아래와 같이 에러가 발생 합니다. daemonsets은 각 노드들에 하나씩 실행되기 때문에 다른 노드로 옮기수가 없어 발생하는 에러 입니다. 
+
