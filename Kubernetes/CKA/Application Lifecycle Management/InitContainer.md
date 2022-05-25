@@ -33,3 +33,37 @@ spec:
     image: busybox:1.28
     command: ['sh', '-c', "until nslookup mydb.$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace).svc.cluster.local; do echo waiting for mydb; sleep 2; done"]
   ```
+  
+  
+## 예제
+
+### 1. Identify the pod that has an initContainer configured.
+```
+kubectl describe po
+```
+![image](https://user-images.githubusercontent.com/81672260/170159780-e09d8a49-8008-4e62-a8bc-e6e8a3589d6b.png)
+
+답 : blue
+
+### 2. What is the image used by the initContainer on the blue pod?
+
+```
+k describe po blue
+```
+![image](https://user-images.githubusercontent.com/81672260/170159915-570f724a-2891-400b-bf8d-597a1bdbeaf5.png)
+
+답 : busybox
+
+  
+### 3. How long after the creation of the POD will the application come up and be available to users?
+
+```
+k describe po purple
+```
+
+![image](https://user-images.githubusercontent.com/81672260/170160166-2486bd8b-a4eb-4b7e-a40b-d7d889802cf1.png)
+
+답 : 600초 + 1200초 = 30Minutes
+
+
+
