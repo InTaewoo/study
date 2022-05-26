@@ -71,6 +71,7 @@ cat /etc/*release*
 ```
 
 ### 2. 업그레이드할 버전 결정 (찾기)
+### kubeadm 업그레이드
 ```
 apt update
 apt-cache madison kubeadm
