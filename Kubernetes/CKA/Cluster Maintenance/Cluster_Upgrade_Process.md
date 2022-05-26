@@ -119,7 +119,7 @@ sudo kubeadm upgrade apply v1.20.x
 ### 5. 재시작 및 업그레이드 됐는지 확인
 
 ```
-sudo systemctl daemon-reload   -- 재시작
+sudo systemctl daemon-reload 
 sudo systemctl restart kubelet
 ```
 
