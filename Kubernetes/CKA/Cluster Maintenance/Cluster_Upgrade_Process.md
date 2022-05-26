@@ -139,5 +139,64 @@ kubectl get no
 kubectl drain node01 --ignore-daemonsets
 ```
 
-### 1. 
+### 1. ssh로 워커 노드에 접속
+```
+kubectl get no -o wide
+ssh 10.62.28.9
+```
+### 2. 업그레이드
+
+```
+# replace x in 1.20.x-00 with the latest patch version
+apt-mark unhold kubeadm && \
+apt-get update && apt-get install -y kubeadm=1.20.x-00 && \
+apt-mark hold kubeadm
+-
+# since apt-get version 1.1 you can also use the following method
+apt-get update && \
+apt-get install -y --allow-change-held-packages kubeadm=1.20.x-00
+```
+### 3. "kubeadm 업그레이드" 호출
+
+```
+sudo kubeadm upgrade node
+```
+
+
+### 4. kubelet 및 kubectl 업그레이드 
+
+```
+# replace x in 1.20.x-00 with the latest patch version
+apt-mark unhold kubelet kubectl && \
+apt-get update && apt-get install -y kubelet=1.20.x-00 kubectl=1.20.x-00 && \
+apt-mark hold kubelet kubectl
+-
+# since apt-get version 1.1 you can also use the following method
+apt-get update && \
+apt-get install -y --allow-change-held-packages kubelet=1.20.x-00 kubectl=1.20.x-00
+```
+
+
+### 5. kubelet 다시 시작
+
+```
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+```
+
+### 6. 업그레이드 확인
+```
+exit
+kubectl get no
+```
+
+
+![image](https://user-images.githubusercontent.com/81672260/170401070-b8894f63-8d75-455a-b7f6-ce707a36d0e9.png)
+
+### 7. Remove the restriction and mark the worker node as schedulable again.
+
+```
+kubectl uncordon node01
+```
+
 
