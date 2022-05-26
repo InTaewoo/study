@@ -55,6 +55,33 @@ systemctl restart kubelet  : kubelet 재 시작
 kubectl uncordon node-1
 ```
 
+## 예제
 
+### 1. 운영체제 확인
+
+```
+cat /etc/*release*
+```
+
+### 2. 업그레이드할 버전 결정 (찾기)
+```
+apt update
+apt-cache madison kubeadm
+# find the latest 1.20 version in the list
+# it should look like 1.20.x-00, where x is the latest patch
+```
+### 3. 컨트롤 플레인 노드 업그레이드
+
+```
+apt-get --version 
+# replace x in 1.20.x-00 with the latest patch version
+apt-mark unhold kubeadm && \
+apt-get update && apt-get install -y kubeadm=1.20.x-00 && \
+apt-mark hold kubeadm
+-
+# apt-get 버전이 1.1 이상이면 이 
+apt-get update && \
+apt-get install -y --allow-change-held-packages kubeadm=1.20.x-00
+```
 
 
