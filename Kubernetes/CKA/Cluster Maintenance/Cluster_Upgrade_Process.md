@@ -55,7 +55,14 @@ systemctl restart kubelet  : kubelet 재 시작
 kubectl uncordon node-1
 ```
 
-## 예제
+## 예제1 - 마스터노드 업그레이드
+
+### 0. 노드 비우기 (SchdeulingDisabled 상태로 변경)
+
+```
+kubectl drain controlplane --ignore-daemonsets
+```
+
 
 ### 1. 운영체제 확인
 
@@ -116,4 +123,21 @@ sudo systemctl restart kubelet
 ```
 
 ![image](https://user-images.githubusercontent.com/81672260/170398826-4c80bd8c-e57e-472b-a2b8-b36712586687.png)
+
+
+## 6. Mark the controlplane node as "Schedulable" again
+```
+kubectl uncordon controlplane
+```
+
+## 예제2 - 워커 노드 업그레이드
+
+### 0. 노드 비우기 (SchdeulingDisabled 상태로 변경)
+
+```
+kubectl get no
+kubectl drain node01 --ignore-daemonsets
+```
+
+### 1. 
 
