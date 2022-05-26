@@ -20,7 +20,7 @@
 - v1.13이 출시될 경우 업그레이드를 해줘야 한다.
 
 
-## 버전 업그레이드 방법
+## [버전 업그레이드 방법](https://v1-20.docs.kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/)
 
 ![image](https://user-images.githubusercontent.com/81672260/170192340-b0150260-469f-4fd8-b066-fd1827a79b9c.png)
 
@@ -70,7 +70,7 @@ apt-cache madison kubeadm
 # find the latest 1.20 version in the list
 # it should look like 1.20.x-00, where x is the latest patch
 ```
-### 3. 컨트롤 플레인 노드 업그레이드
+### 3. 컨트롤 플레인(마스터) 노드 업그레이드
 
 ```
 apt-get --version 
