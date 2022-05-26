@@ -79,9 +79,41 @@ apt-mark unhold kubeadm && \
 apt-get update && apt-get install -y kubeadm=1.20.x-00 && \
 apt-mark hold kubeadm
 -
-# apt-get 버전이 1.1 이상이면 이 
+# apt-get 버전이 1.1 이상이면 이 방법으로
 apt-get update && \
 apt-get install -y --allow-change-held-packages kubeadm=1.20.x-00
+
+x = 설치할 버전에 따라 변경
+
+kubeadm version   -- 버전 확인
+
+kubeadm upgrade plan -- 업그레이드 계획 확인
+
+# replace x with the patch version you picked for this upgrade   -- 업그레이드할 버전을 선택하고 적절한 명령을 실행합니다
+sudo kubeadm upgrade apply v1.20.x
+
 ```
 
+### 4. kubelet 및 kubectl 업그레이드 
+
+```
+    # 1.20.x-00의 x를 최신 패치 버전으로 교체
+    apt-mark unhold kubelet kubectl && \
+    apt-get 업데이트 && apt-get 설치 -y kubelet=1.20.x-00 kubectl=1.20.x-00 && \
+    apt-mark 홀드 kubelet kubectl
+    -
+    # apt-get 버전 1.1부터 다음 방법을 사용할 수도 있습니다.
+    
+    apt-get update && \
+    apt-get install -y --allow-change-held-packages kubelet=1.20.x-00 kubectl=1.20.x-00
+```
+
+### 5. 재시작 및 업그레이드 됐는지 확인
+
+```
+sudo systemctl daemon-reload   -- 재시작
+sudo systemctl restart kubelet
+```
+
+![image](https://user-images.githubusercontent.com/81672260/170398826-4c80bd8c-e57e-472b-a2b8-b36712586687.png)
 
