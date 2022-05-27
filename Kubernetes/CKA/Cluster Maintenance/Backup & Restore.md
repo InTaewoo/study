@@ -28,5 +28,6 @@ ls /opt/snapshot-pre-boot.db
 etcdctl snapshot restore --data-dir /var/lib/etcd-from-backup /opt/snapshot-pre-boot.db   새로운 폴더 생성 후 백업 한 경로 지정
 ls /var/lib/etcd-from-backup/
 vi /etc/kubernetes/manifests/etcd.yaml 
+hostPath : path 경로 수정 path: /var/lib/etcd-from-backup
 kubectl get po -n kube-system 
 ```
