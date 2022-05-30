@@ -48,3 +48,10 @@ spec:
       <content-hidden>
     - --basic-auth-file=/tmp/users/user-details.csv
 ```
+
+생성되면 사용자 자격 증명을 사용하여 kube-api 서버에 인증할 수 있다.
+
+```
+curl -v -k https://localhost:6443/api/v1/pods -u "user1:password123"
+```
+
