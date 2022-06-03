@@ -17,3 +17,38 @@
 우리의 경우 DB-Pod에 대한 인그레스 트래픽만을 허용하기를 원할때 Ingress를 추가한다.
 
 ![image](https://user-images.githubusercontent.com/81672260/171804332-67ae014b-de20-4d23-979c-fbc61c23ac8b.png)
+
+
+### 네트워크 정책 예시
+
+![image](https://user-images.githubusercontent.com/81672260/171804606-9cc8ae45-35fd-4359-85b8-f57105162b24.png)
+
+```
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: test-network-policy
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      role: db
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - ipBlock:
+        cidr: 172.17.0.0/16
+        except:
+        - 172.17.1.0/24
+    - namespaceSelector:
+        matchLabels:
+          project: myproject
+    - podSelector:
+        matchLabels:
+          role: frontend
+    ports:
+    - protocol: TCP
+      port: 6379
+ ```
