@@ -52,3 +52,27 @@ spec:
     - protocol: TCP
       port: 6379
  ```
+ 
+ 
+ ## 예시 
+ 
+ ### Create a network policy to allow traffic from the Internal application only to the payroll-service and db-service.
+
+Use the spec given below. You might want to enable ingress traffic to the pod to test your rules in the UI.
+
+내부 응용프로그램만 통신이 가능한 네트워크 정책 만들기
+
+- Policy Name: internal-policy
+
+- Policy Type: Egress
+
+- Egress Allow: payroll
+
+- Payroll Port: 8080
+
+- Egress Allow: mysql
+
+- MySQL Port: 3306
+
+![image](https://user-images.githubusercontent.com/81672260/171820217-42646d90-1ecd-43a2-84ff-ea09b012ac51.png)
+
