@@ -94,3 +94,34 @@ Use the spec given below. You might want to enable ingress traffic to the pod to
 
 ![image](https://user-images.githubusercontent.com/81672260/171820217-42646d90-1ecd-43a2-84ff-ea09b012ac51.png)
 
+```
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: internal-policy
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      name: internal
+  policyTypes:
+    - Egress
+  egress:
+    - to:
+        - podSelector:
+            matchLabels:
+              name: payroll
+      ports:
+        - protocol: TCP
+          port: 8080
+    - to:
+        - podSelector:
+            matchLabels:
+               name: mysql
+      ports:
+       - protocol: TCP
+         port: 3306
+```
+
+코드는 [쿠버네티스 공식사이트](https://kubernetes.io/docs/concepts/services-networking/network-policies/) 참고하여 작성
+![image](https://user-images.githubusercontent.com/81672260/172275249-4e9720e6-7225-4726-bc6e-bac808a47784.png)
