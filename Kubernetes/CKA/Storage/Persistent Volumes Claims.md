@@ -29,3 +29,19 @@ kubectl get persistentvolumeclaim
 - 클레임이 생성되면 kubernetes는 이전에 생성된 볼륨을 확인한다. accessModes가 일치.
 - pvc 용량은 500MI pv용량은 1Gi
 - `kubectl create -f pvc-definition.yaml`을 실행하면 pvc가 pv에 바인딩된다.
+
+### View PVC
+
+![image](https://user-images.githubusercontent.com/81672260/172319627-f0fc9370-e980-4e6c-99ef-17a6620159b5.png)
+
+`kubectl get persistentvolumeclaim`
+- 불륨 가져오기 명령을 다시 실행하면 영구 볼륨 클레임이 영구 볼륨에 바인딩된다.
+
+### Delete PVC
+
+![image](https://user-images.githubusercontent.com/81672260/172320002-e3cfbc5e-fa99-4da0-ba95-cb7300cded4b.png)
+
+`kubectl delete persistentvolumeclaim myclaim`
+pvc는 삭제되지만 pv는 유지된다.
+
+`persistentVolumeReclaimPolicy: Recycle` : 이 경우 데이터 볼륨의 데이터는 다른 클레임에서 사용할 수 있도록 스크러빙된다.
