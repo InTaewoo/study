@@ -19,7 +19,25 @@
 ![image](https://user-images.githubusercontent.com/81672260/171804332-67ae014b-de20-4d23-979c-fbc61c23ac8b.png)
 
 
-### 네트워크 정책 예시
+## 네트워크 정책 예시
+
+
+### 1. What type of traffic is this Network Policy configured to handle?
+![image](https://user-images.githubusercontent.com/81672260/172271362-70040305-73a3-4c96-a6c2-338f954f2d95.png)
+
+```
+kubectl describe networkpolicies.networking.k8s.io
+```
+
+### 2. What is the impact of the rule configured on this Network Policy?
+
+
+
+
+
+
+
+
 
 ![image](https://user-images.githubusercontent.com/81672260/171804606-9cc8ae45-35fd-4359-85b8-f57105162b24.png)
 
