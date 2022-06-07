@@ -9,8 +9,20 @@
 
 ![image](https://user-images.githubusercontent.com/81672260/172310159-a8902390-2710-4b38-97f2-492e5a5eb18e.png)
 
+- pv-definition.yaml 정의 파일을 생성한다.
 - 기본 템플릿으로 시작하여 API 버전을 업데이트해 클라이언트를 영구 볼륨으로 설정.
 - `metadata` 이름을 `pv-vol1`로 지정.
 - `accessModes`를 지정하여 읽기 전용 모드 또는 읽기 쓰기 모드 등에서 호스트에 마운트되어야 한다.
 - `capacity`를 추가해 용량을 지정한다.
 - `hostPath`를 추가해 스토리지를 사용하는 호스트 경로 옵션을 지정한다.
+
+```
+kubectl create -f pv-definition.yaml
+kubectl get persistentcevolume
+```
+kubectl get persistentcevolume을 통해 AWS EBS로 교체한다.
+```
+awsElasticBlockStore:
+  volumeID: <volume-ID>
+  fsType: ext4
+```
