@@ -21,4 +21,4 @@
 - 파드가 삭제되면 난수를 가진 파일이 호스트에 저장된다.
 
 ![image](https://user-images.githubusercontent.com/81672260/172307380-2dcaf19e-1450-4964-b740-0561144f16d1.png)
-- 
+- AWS EBS 볼륨을 스토리지 볼륨으로 구성하기 위해 `awsElasticBlockStore` `volumeID` `fsType` 입력
