@@ -45,3 +45,26 @@ kubectl get persistentvolumeclaim
 pvc는 삭제되지만 pv는 유지된다.
 
 `persistentVolumeReclaimPolicy: Recycle` : 이 경우 데이터 볼륨의 데이터는 다른 클레임에서 사용할 수 있도록 스크러빙된다.
+
+
+## 문제 예시
+### 1. Configure a volume to store these logs at /var/log/webapp on the host.
+Use the spec provided below.
+
+- Name: webapp
+
+- Image Name: kodekloud/event-simulator
+
+- Volume HostPath: /var/log/webapp
+
+- Volume Mount: /log
+
+```
+kubectl get po
+kubectl edit po webapp
+kubectl replace --force -f /tmp/kubectl-edit-2563353141.yaml
+```
+![image](https://user-images.githubusercontent.com/81672260/172509265-cb9537ac-7ff6-47f3-a9bf-9650d609009c.png)
+![image](https://user-images.githubusercontent.com/81672260/172509370-7e23a0f5-9556-42ae-b19f-ef3123cda547.png)
+
+
