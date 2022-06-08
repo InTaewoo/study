@@ -67,4 +67,23 @@ kubectl replace --force -f /tmp/kubectl-edit-2563353141.yaml
 ![image](https://user-images.githubusercontent.com/81672260/172509265-cb9537ac-7ff6-47f3-a9bf-9650d609009c.png)
 ![image](https://user-images.githubusercontent.com/81672260/172509370-7e23a0f5-9556-42ae-b19f-ef3123cda547.png)
 
+### 2. Create a Persistent Volume with the given specification.
+
+- Volume Name: pv-log
+
+- Storage: 100Mi
+
+- Access Modes: ReadWriteMany
+
+- Host Path: /pv/log
+
+- Reclaim Policy: Retain
+
+```
+vi pv-log.yaml
+kubectl apply -f pv-log.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/172509831-99ca0202-3ea8-4287-a7f4-cb430791e3c9.png)
+
 
