@@ -55,7 +55,7 @@ The PV local-pv should in a bound state.
 name,image,claimName 입력
 ![image](https://user-images.githubusercontent.com/81672260/172532616-57569f21-121a-4f44-bc1e-41ecb434f59a.png)
 
-### 5. Create a new Storage Class called delayed-volume-sc that makes use of the below specs:
+### 6. Create a new Storage Class called delayed-volume-sc that makes use of the below specs:
 
 - provisioner: kubernetes.io/no-provisioner
 - volumeBindingMode: WaitForFirstConsume
