@@ -88,4 +88,16 @@ kubectl apply -f pv-log.yaml
 
 ![image](https://user-images.githubusercontent.com/81672260/172509831-99ca0202-3ea8-4287-a7f4-cb430791e3c9.png)
 
+### 3. Let us claim some of that storage for our application. Create a Persistent Volume Claim with the given specification.
 
+- Volume Name: claim-log-1
+
+- Storage Request: 50Mi
+
+- Access Modes: ReadWriteOnce
+
+```
+vi claim-log-1
+kubectl apply -f claim-log-1
+```
+![image](https://user-images.githubusercontent.com/81672260/172510435-dc44d004-e8d1-4185-a6a8-fa415495437e.png)
