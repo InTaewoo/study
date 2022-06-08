@@ -101,3 +101,23 @@ vi claim-log-1
 kubectl apply -f claim-log-1
 ```
 ![image](https://user-images.githubusercontent.com/81672260/172510435-dc44d004-e8d1-4185-a6a8-fa415495437e.png)
+
+### 4.What is the state of the Persistent Volume Claim?
+`kubectl get pvc` 
+= pending
+
+### 5. What is the state of the Persistent Volume?
+`kubectl get pv`
+= Available
+
+### 6. Why is the claim not bound to the available Persistent Volume?
+= AccessMode가 다르기 때문에 bound되지 않았다.
+
+### 7.Update the Access Mode on the claim to bind it to the PV.
+Delete and recreate the claim-log-1.
+pvc claim-log-1을 지우고 AccessMode를 같게 변경
+
+![image](https://user-images.githubusercontent.com/81672260/172510973-69b9008e-f374-4f12-be20-031f375615f3.png)
+
+- accesMode에서 ReadWriteOnce를 ReadWriteMany로 수정
+
