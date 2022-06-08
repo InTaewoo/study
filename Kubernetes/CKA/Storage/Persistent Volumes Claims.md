@@ -79,6 +79,8 @@ kubectl replace --force -f /tmp/kubectl-edit-2563353141.yaml
 
 - Reclaim Policy: Retain
 
+코드는 [공식홈페이지](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)에서 가져온다
+
 ```
 vi pv-log.yaml
 kubectl apply -f pv-log.yaml
