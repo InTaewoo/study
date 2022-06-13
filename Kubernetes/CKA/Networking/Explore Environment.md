@@ -42,7 +42,7 @@ kubectl get no -o wide
 
 ### 5.What is the MAC address assigned to node01?
 
-`arp node01`
+```arp node01```
 ![image](https://user-images.githubusercontent.com/81672260/173262850-b2da826d-30c7-402d-ad1f-cba5d80e38e1.png)
 
 
@@ -55,7 +55,7 @@ kubectl get no -o wide
 ### 7. If you were to ping google from the controlplane node, which route does it take?
 What is the IP address of the Default Gateway?
 
-` ip route show default`
+``` ip route show default```
 ![image](https://user-images.githubusercontent.com/81672260/173263182-f294ef59-99f6-46dd-a304-aca14dd33c70.png)
 
 답 : 172.25.0.1
@@ -63,10 +63,17 @@ What is the IP address of the Default Gateway?
 
 ### 8. What is the port the kube-scheduler is listening on in the controlplane node?
 
-` netstat -nplt | grep kube-scheduler`
+``` netstat -nplt | grep kube-scheduler```
 ![image](https://user-images.githubusercontent.com/81672260/173263306-4f37a5be-7f4f-44a3-a92f-9ac73206b17f.png)
 
 답 : 10259
 
-### 9.
+### 9. Notice that ETCD is listening on two ports. Which of these have more client connections established?
+```
+netstat -anp | grep etcd
+```
+![image](https://user-images.githubusercontent.com/81672260/173263830-fdc65dc3-bd1b-4ac3-abeb-fe71194e3656.png)
+established가 되어있는 가장 많은 클라이언트
+답 : 2379
+
 
