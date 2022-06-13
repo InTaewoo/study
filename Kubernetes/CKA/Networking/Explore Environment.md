@@ -19,17 +19,20 @@ kubectl get no -o wide
 ip a
 10.50.177.12에 연결되어 있는 node 선택
 ```
+
 답 : eth0
 
 ![image](https://user-images.githubusercontent.com/81672260/173262734-4a685729-8303-4ac8-a2dd-05566bac46fb.png)
 
 
 ### 3.What is the MAC address of the interface on the controlplane node?
+
 ```
 kubectl get no -o wide
 ip a
 10.50.177.12에 연결되어 있는 MAC address 선택
 ```
+
 답 : 02:42:0a:32:b1:0c
 
 ### 4. What is the IP address assigned to node01?
@@ -42,7 +45,10 @@ kubectl get no -o wide
 
 ### 5.What is the MAC address assigned to node01?
 
-```arp node01```
+```
+arp node01
+```
+
 ![image](https://user-images.githubusercontent.com/81672260/173262850-b2da826d-30c7-402d-ad1f-cba5d80e38e1.png)
 
 
