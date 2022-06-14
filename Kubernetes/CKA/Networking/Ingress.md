@@ -53,3 +53,15 @@ kubectl edit ingress -n ingress-wear-watch
 ```
 
 ![image](https://user-images.githubusercontent.com/81672260/173530791-56359b4b-ce44-4f24-8d5d-d81d86fe2b0a.png)
+
+### 8. You are requested to make the new application available at /pay.
+
+- Ingress Created
+
+- Path: /pay
+
+- Configure correct backend service
+
+- Configure correct backend port
+
+
