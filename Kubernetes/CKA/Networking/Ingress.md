@@ -33,6 +33,11 @@ kubectl describe ingress -n app-space
 
 ![image](https://user-images.githubusercontent.com/81672260/173530069-7c54077d-b383-4a05-90c5-4daad75dd75e.png)
 
+![image](https://user-images.githubusercontent.com/81672260/173738741-135b4179-5d22-4dc1-aa35-63f302e7ceef.png)
+
+![Uploading image.png…]()
+
+
 ### 6. If the requirement does not match any of the configured paths what service are the requests forwarded to?
 
 ![image](https://user-images.githubusercontent.com/81672260/173530304-f1a29539-25f2-49e3-a5c8-6a4ca55eb93d.png)
@@ -98,17 +103,32 @@ Create a service following the given specs.
 
 ![image](https://user-images.githubusercontent.com/81672260/173736083-1508d8a4-b77b-4bcc-898a-8d975865a8ee.png)
 
+
+### 13. Create the ingress resource to make the applications available at /wear and /watch on the Ingress service.- Ingress 생성하여 홈페이지 접속 확인
+Create the ingress in the app-space namespace.
+
+![image](https://user-images.githubusercontent.com/81672260/173737834-dcd801ff-3276-4164-ad74-4b7e000d4db2.png)
+
 ```
-kubectl expose deployment ingress-controller -n ingress-space--name=ingress --type=NodePort --port=80 --target-port=80 --namespace=ingress-space -o yaml > ingress.yaml
-kubectl get svc -n ingress-space
-kubectl edit svc ingress-controller -n ingress-space NodePort=30080 으로 수정
-kubectl apply -f ingress.yaml
+kubectl create ingress ingress-wear-watch -n app-space --rule="/wear=wear-service:8080" --rule="/watch=watch-service:8080"
+kubectl get ingress ingress-wear-watch -n app-space
+kubectl get deployments.apps -n app-space
+kubectl edit ingress ingress-wear-watch -n app-space --> watch-service => video-service
+``
+
+하지만 홈페이지 접속 불가
+
+![image](https://user-images.githubusercontent.com/81672260/173738440-2777a021-838d-4260-a19e-ddc7d7879ce7.png)
+
+`ERR_TOO_MANY_REDIRECTS` 리디엑션 관련 오류는 SSL에서 시도하기 때문에 발생
+
 ```
+kubectl edit ingress ingress-wear-watch -n app-space
 
-![image](https://user-images.githubusercontent.com/81672260/173737370-e2873801-0ad0-4404-b144-734c1015e410.png)
-
-![image](https://user-images.githubusercontent.com/81672260/173737421-40d94019-fe97-4140-8d03-31a47aff2b2a.png)
-
-
-
-
+추가
+ annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+ ```
+ 
+![image](https://user-images.githubusercontent.com/81672260/173738648-2fd265d3-3d3c-4b7c-b46a-885855167d3b.png)
