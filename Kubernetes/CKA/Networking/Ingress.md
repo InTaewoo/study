@@ -65,3 +65,35 @@ kubectl edit ingress -n ingress-wear-watch
 - Configure correct backend port
 
 
+### 9. Let us now deploy an Ingress Controller. First, create a namespace called ingress-space. - Namespace 생성
+We will isolate all ingress related objects into its own namespace.
+
+![image](https://user-images.githubusercontent.com/81672260/173735007-a496dec6-d396-48ca-b00d-dc4eedc93ebb.png)
+
+```
+kubectl create namespace ingress-space
+```
+
+### 10.The NGINX Ingress Controller requires a ConfigMap object. Create a ConfigMap object in the ingress-space. ConfigMap 생성
+
+Use the spec given below. No data needs to be configured in the ConfigMap.
+
+![image](https://user-images.githubusercontent.com/81672260/173735275-d8951f23-97d8-4212-8a40-7f4e2a4ccc87.png)
+
+```
+kubectl create configmap nginx-configuration -n ingress-space
+```
+
+### 11. The NGINX Ingress Controller requires a ServiceAccount. Create a ServiceAccount in the ingress-space namespace. ServiceAccount 생성
+
+Use the spec provided below.
+
+```
+kubectl create serviceaccount ingress-serviceaccount -n ingress-space
+```
+
+### 12. Let us now create a service to make Ingress available to external users. 서비스 배포하기
+
+Create a service following the given specs. 
+
+![image](https://user-images.githubusercontent.com/81672260/173736083-1508d8a4-b77b-4bcc-898a-8d975865a8ee.png)
