@@ -97,3 +97,18 @@ kubectl create serviceaccount ingress-serviceaccount -n ingress-space
 Create a service following the given specs. 
 
 ![image](https://user-images.githubusercontent.com/81672260/173736083-1508d8a4-b77b-4bcc-898a-8d975865a8ee.png)
+
+```
+kubectl expose deployment ingress-controller -n ingress-space--name=ingress --type=NodePort --port=80 --target-port=80 --namespace=ingress-space -o yaml > ingress.yaml
+kubectl get svc -n ingress-space
+kubectl edit svc ingress-controller -n ingress-space NodePort=30080 으로 수정
+kubectl apply -f ingress.yaml
+```
+
+![image](https://user-images.githubusercontent.com/81672260/173737370-e2873801-0ad0-4404-b144-734c1015e410.png)
+
+![image](https://user-images.githubusercontent.com/81672260/173737421-40d94019-fe97-4140-8d03-31a47aff2b2a.png)
+
+
+
+
