@@ -33,10 +33,6 @@ kubectl describe ingress -n app-space
 
 ![image](https://user-images.githubusercontent.com/81672260/173530069-7c54077d-b383-4a05-90c5-4daad75dd75e.png)
 
-![image](https://user-images.githubusercontent.com/81672260/173738741-135b4179-5d22-4dc1-aa35-63f302e7ceef.png)
-
-![Uploading image.png…]()
-
 
 ### 6. If the requirement does not match any of the configured paths what service are the requests forwarded to?
 
@@ -114,13 +110,14 @@ kubectl create ingress ingress-wear-watch -n app-space --rule="/wear=wear-servic
 kubectl get ingress ingress-wear-watch -n app-space
 kubectl get deployments.apps -n app-space
 kubectl edit ingress ingress-wear-watch -n app-space --> watch-service => video-service
-``
+```
 
 하지만 홈페이지 접속 불가
 
 ![image](https://user-images.githubusercontent.com/81672260/173738440-2777a021-838d-4260-a19e-ddc7d7879ce7.png)
 
 `ERR_TOO_MANY_REDIRECTS` 리디엑션 관련 오류는 SSL에서 시도하기 때문에 발생
+
 
 ```
 kubectl edit ingress ingress-wear-watch -n app-space
@@ -129,6 +126,8 @@ kubectl edit ingress ingress-wear-watch -n app-space
  annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
- ```
- 
-![image](https://user-images.githubusercontent.com/81672260/173738648-2fd265d3-3d3c-4b7c-b46a-885855167d3b.png)
+```
+
+![image](https://user-images.githubusercontent.com/81672260/173739040-b3ec30d3-c14d-4efe-b498-751b76921e40.png)
+![image](https://user-images.githubusercontent.com/81672260/173739057-0cbf3e0a-4a00-4a50-9028-72e39bb38f55.png)
+
