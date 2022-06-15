@@ -118,6 +118,7 @@ kubectl edit ingress ingress-wear-watch -n app-space --> watch-service => video-
 
 `ERR_TOO_MANY_REDIRECTS` 리디엑션 관련 오류는 SSL에서 시도하기 때문에 발생
 
+![image](https://user-images.githubusercontent.com/81672260/173739119-191cf9f0-5056-4875-ae2a-8f5111c4d68e.png)
 
 ```
 kubectl edit ingress ingress-wear-watch -n app-space
