@@ -27,4 +27,30 @@ kubectl edit svc mysql-service -n beta
 targetport=3306 으로 변경
 ```
 
+## 3. Troubleshooting Test 3: The same 2 tier application is deployed in the gamma namespace. It must display a green web page on success. Click on the App tab at the top of your terminal to view your application. It is currently failed. Troubleshoot and fix the issue. 같은 예시
+
+- 접속 장애 연결 오류
+
+![image](https://user-images.githubusercontent.com/81672260/174017152-2061df73-62cb-4126-9f80-2648925cb7cb.png)
+
+```
+kubectl get svc -n gamma -o wide : 파드의 이름이 잘못 지정돼 연결이 안되는 상태
+```
+
+## 4. Troubleshooting Test 4: The same 2 tier application is deployed in the delta namespace. It must display a green web page on success. Click on the App tab at the top of your terminal to view your application. It is currently failed. Troubleshoot and fix the issue.
+![image](https://user-images.githubusercontent.com/81672260/174017794-64114838-68c9-4cf9-889f-c45cee59b3a1.png)
+
+![image](https://user-images.githubusercontent.com/81672260/174017928-c64ba1fc-010f-4891-ac4b-eaf5354259b5.png)
+
+- sql user에 접근할 수 없는 오류
+
+```
+kubectl edit deploy -n delta
+DB_User 를 root로 수정
+```
+
+
+![image](https://user-images.githubusercontent.com/81672260/174018318-518b4786-24a7-4f84-b740-1261756c967d.png)
+
+
 
