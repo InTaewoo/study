@@ -50,3 +50,31 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ```
 ssh node01
 ```
+
+
+### 2. Initialize Control Plane Node (Master Node). Use the following options 마스터 노드 생성하기
+
+
+1. apiserver-advertise-address - Use the IP address allocated to eth0 on the controlplane node
+
+2. apiserver-cert-extra-sans - Set it to controlplane
+
+3. pod-network-cidr - Set to 10.244.0.0/16
+Once done, set up the default kubeconfig file and wait for node to be part of the cluster.
+
+
+```
+ip a   --> enth0의 IP확인
+kubeadm init --apiserver-advertise-address 10.4.218.3 --apiserver-cert-extra-sans controlplane --pod-network-cidr 10.244.0.0/16
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+kubectl get no
+```
+
+![image](https://user-images.githubusercontent.com/81672260/173991184-3d324c92-6d97-47fd-bc19-4eb6ada31e17.png)
+
+![image](https://user-images.githubusercontent.com/81672260/173991531-34bd79c3-8ede-49f3-a420-d42831949bba.png)
+
