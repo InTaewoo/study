@@ -97,6 +97,18 @@ kubectl get no
 ![image](https://user-images.githubusercontent.com/81672260/173992484-e828b4b4-f7eb-46bb-b0ba-8aa5960fe3a4.png)
 ![image](https://user-images.githubusercontent.com/81672260/173992575-f221e24f-2a1b-48b6-81c7-63cd2ad2ab68.png)
 
+### 4. Install a Network Plugin. As a default, we will go with flannel
+Refer to the official documentation for the procedure.
+네트워크 플러그인 flannel 생성
+
+[Install addon](https://kubernetes.io/ko/docs/concepts/cluster-administration/addons/)
+
+```
+kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
+kubectl get po -n kube-system
+```
+
+![image](https://user-images.githubusercontent.com/81672260/173992981-33d8c4b2-257d-4a90-af24-8e2c26b416ac.png)
 
 
 
