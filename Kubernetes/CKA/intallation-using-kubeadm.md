@@ -78,3 +78,26 @@ kubectl get no
 
 ![image](https://user-images.githubusercontent.com/81672260/173991531-34bd79c3-8ede-49f3-a420-d42831949bba.png)
 
+### 3. Join node01 to the cluster using the join token
+토큰을 통해 node01 생성
+
+```
+kubeadm token create -h   : kubeadm을 통해 토큰 생성하는 방법
+kubeadm token create --print-join-command : 마스터노드에서 토큰 생성
+ssh node01   :  node01로 접속
+kubeadm join 10.4.218.3:6443 --token ttlgj7.r4w7skca483j7qp9 --discovery-token-ca-cert-hash sha256:db8fce2444be9247a78446dd2d08f088dfabbfd73ce6dbb64e87bcade47ea5f4  : 생성한 토큰 붙여넣기
+
+exit
+kubectl get no
+
+```
+
+
+![image](https://user-images.githubusercontent.com/81672260/173992118-10306ccc-b5e5-4f57-838d-160041a8e5e0.png)
+![image](https://user-images.githubusercontent.com/81672260/173992484-e828b4b4-f7eb-46bb-b0ba-8aa5960fe3a4.png)
+![image](https://user-images.githubusercontent.com/81672260/173992575-f221e24f-2a1b-48b6-81c7-63cd2ad2ab68.png)
+
+
+
+
+
