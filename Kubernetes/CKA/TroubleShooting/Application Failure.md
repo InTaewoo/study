@@ -14,3 +14,17 @@ kubectl edit svc mysql     : mysql -> mysql-service
 ![image](https://user-images.githubusercontent.com/81672260/174015030-0f6ec451-79e7-4ea6-8158-a81a3c7ba7d2.png)
 
 
+## 2. roubleshooting Test 2: The same 2 tier application is deployed in the beta namespace. It must display a green web page on success. Click on the App tab at the top of your terminal to view your application. It is currently failed. Troubleshoot and fix the issue. 같은 예시
+
+![image](https://user-images.githubusercontent.com/81672260/174015616-d003c812-8673-4918-9ce4-6a26244655fa.png)
+- 111 Coneection refused 을 확인
+
+![image](https://user-images.githubusercontent.com/81672260/174016039-30c66495-08ef-4789-a718-1d272dad020b.png)
+port = 3306 이여야 한다.
+
+```
+kubectl edit svc mysql-service -n beta
+targetport=3306 으로 변경
+```
+
+
