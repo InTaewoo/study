@@ -53,3 +53,12 @@ kubectl logs kube-controller-manager-controlplane -n kube-system
 ```
 ![image](https://user-images.githubusercontent.com/81672260/174234200-3ae81950-c647-4d1e-aaf3-5e9cbb4323f9.png)
 
+```
+kubectl logs kube-controller-manager-controlplane -n kube-system
+```
+
+![image](https://user-images.githubusercontent.com/81672260/174240907-f0c02dca-7dbc-450b-bdbb-a87cd1e0dc4f.png)
+에서 -XXXX 삭제
+
+
+
