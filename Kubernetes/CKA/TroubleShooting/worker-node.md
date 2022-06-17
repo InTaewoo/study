@@ -46,6 +46,8 @@ clientCAFile:을 ca.crt 로 수정
 systemctl start kubelet
 ```
 
+### 3. The cluster is broken again. Investigate and fix the issue.
+
 
 
 
