@@ -1,0 +1,9 @@
+```
+kubectl run test-np --image=busybox:1.28 --rm -it -- sh
+nc -z -v -w 2 np-test-service 80 
+```
+
+nc: netcat
+-z: 스캔 시 사용, 연결되면 바로 닫는 용도
+-v: verbose
+-w secs: secs 시간 후 타임아웃
