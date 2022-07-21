@@ -17,5 +17,10 @@ systemctl status docker
 ssh node01
 systemctl status kubelet
 작동이 안될 시 : systemctl enable --now kubelet
+```
 
 3. kube-prxoy Running?
+파드가 정상적으로 작동하는지 
+```
+kubectl get po -n kube-system -o wide
+```
