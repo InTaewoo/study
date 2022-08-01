@@ -1,3 +1,7 @@
+
+![image](https://user-images.githubusercontent.com/81672260/182054080-47f16f3f-71be-4600-a6b9-24b66e77c224.png)
+
+
 ## CKA 정보
 이번에 Certified Kubernetes Administrator(이하 CKA) 자격증을 취득하기로 했다. 클라우드 엔지니어로 출발하고 싶은 사람으로서 그동안 공부해 온 쿠버네티스 운영 능력을 검증받고 싶기도 했다. CKA 자격증은 이런 내게 꼭 필요한 목표점이 되어 주었다.
 
